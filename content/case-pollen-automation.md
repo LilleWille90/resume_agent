@@ -13,6 +13,7 @@ Consumer-grade sensors can’t directly detect pollen, yet users still want thei
 
 ## Result
 - More than 25% of active users onboarded and kept the feature running continuously (strong signal of retained value)
+- We also saw how users started utilising the pollen information when traveling abroad to understand air quality. Proving how important these informations are for the user.
 
 ## Why it worked
 - Clear user problem
