@@ -1,6 +1,6 @@
 # Mattias Willner — Product Manager
 
-Product Manager with 8+ years in software and complex IT systems across both frontend and backend teams. I’ve shipped products end-to-end in consumer apps, IoT and internal tools, combining strong product sense and systems thinking to create high-impact solutions. I’m social and open-minded, a music nerd, and described by colleagues as an enthusiastic people person.  
+Product Manager with 10+ years in software and complex IT systems across both frontend and backend teams. I’ve shipped products end-to-end in consumer apps, IoT and internal tools, combining strong product sense and systems thinking to create high-impact solutions. I’m social and open-minded, a music nerd, and described by colleagues as an enthusiastic people person.  
 (Source: CV/Resume)
 
 ## Current
