@@ -1,8 +1,8 @@
-import OpenAI from "openai";
+import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const client = new Anthropic({ apiKey: process.env.CLAUDE_RESUME_AGENT });
 
 function chunkText(text, chunkSize = 900, overlap = 120) {
   const chunks = [];
@@ -15,7 +15,6 @@ function chunkText(text, chunkSize = 900, overlap = 120) {
 }
 
 function scoreChunk(q, chunk) {
-  // superenkel scoring: ordmatchning
   const words = q.toLowerCase().split(/\s+/).filter(w => w.length > 2);
   const hay = chunk.toLowerCase();
   let score = 0;
@@ -48,7 +47,6 @@ function retrieve(query, k = 6) {
     .sort((a, b) => b.score - a.score)
     .slice(0, k);
 
-  // om allt är 0, plocka ändå lite “about/faq”
   const fallback = scored.every(s => s.score === 0);
   if (fallback) {
     const preferred = KB_CHUNKS.filter(ch => ["about.md", "faq.md"].includes(ch.doc)).slice(0, k);
@@ -69,9 +67,7 @@ export default async (req) => {
     const context = top.map(t => `SOURCE: ${t.doc}\n${t.text}`).join("\n\n---\n\n");
     const sources = [...new Set(top.map(t => t.doc))];
 
-    const system = `
-const system = `
-Du är en rekryterar-assistent som representerar kandidaten Mattias Willner.
+    const systemPrompt = `Du är en rekryterar-assistent som representerar kandidaten Mattias Willner.
 Du pratar alltid OM Mattias i tredje person (han/Mattias). Du får aldrig skriva "jag", "mig", "min" när du beskriver Mattias.
 Om frågan gäller något personligt som inte finns i källorna: säg att du inte vet och föreslå att kontakta Mattias direkt.
 
@@ -81,17 +77,14 @@ Regler:
 - Dela aldrig känsliga personuppgifter.
 - Svara kort, konkret och professionellt.
 - Avsluta med 2–4 förslag på följdfrågor.
-Returnera svaret i JSON med nycklarna: answer, suggested_questions (array).
-`;
+Returnera svaret i JSON med nycklarna: answer, suggested_questions (array).`;
 
-    // Begränsa history lite (bra för kostnad/latens)
     const trimmedHistory = history.slice(-8).map(m => ({
       role: m.role,
       content: m.content
     }));
 
-    const input = [
-      { role: "system", content: system },
+    const messages = [
       {
         role: "user",
         content:
@@ -108,12 +101,18 @@ Svara som JSON: {"answer":"...","suggested_questions":["...","..."]}`
       }
     ];
 
-    const resp = await openai.responses.create({
-      model: process.env.OPENAI_MODEL || "gpt-5.2",
-      input
+    const response = await client.messages.create({
+      model: "claude-sonnet-4-6",
+      max_tokens: 4096,
+      system: systemPrompt,
+      messages
     });
 
-    const text = resp.output_text || "";
+    const text = response.content
+      .filter(block => block.type === "text")
+      .map(block => block.text)
+      .join("");
+
     let parsed;
     try {
       parsed = JSON.parse(text);
