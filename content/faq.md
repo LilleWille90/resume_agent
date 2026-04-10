@@ -1,7 +1,7 @@
 # FAQ (Recruiter-friendly)
 
 ## Can you summarise your background in 30 seconds?
-I’m a Product Manager with 8+ years across consumer apps, IoT and internal tools. Today I own strategy and roadmap for a domain in Electrolux OneApp and lead cross-functional teams across mobile, backend, firmware, data, UX and compliance functions.
+I’m a Product Manager with 10+ years across consumer apps, IoT and internal tools. Today I own strategy and roadmap for a domain in Electrolux OneApp and lead cross-functional teams across mobile, backend, firmware, data, UX and compliance functions.
 
 ## What kinds of products do you enjoy most?
 Products with real user impact and meaningful complexity: platforms, data/integrations, multi-market experiences, and connected products where software increases the value of hardware.
