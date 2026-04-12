@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
+import { getStore } from "@netlify/blobs";
 
 const client = new Anthropic({ apiKey: process.env.CLAUDE_RESUME_AGENT });
 
@@ -32,24 +33,44 @@ function loadKnowledgeBase() {
   return docs;
 }
 
-const KB = loadKnowledgeBase();
-const KB_CHUNKS = KB.flatMap(doc =>
-  chunkText(doc.text).map((c, idx) => ({
-    id: `${doc.name}#${idx + 1}`,
-    doc: doc.name,
-    text: c
-  }))
-);
+const KB_STATIC = loadKnowledgeBase();
 
-function retrieve(query, k = 6) {
-  const scored = KB_CHUNKS
+async function loadBlobContent() {
+  try {
+    const store = getStore({ name: "knowledge-base", consistency: "strong" });
+    const { blobs } = await store.list();
+    const docs = [];
+    for (const blob of blobs) {
+      const data = await store.get(blob.key, { type: "json" });
+      if (data) {
+        docs.push({ name: data.name, text: data.text });
+      }
+    }
+    return docs;
+  } catch {
+    return [];
+  }
+}
+
+function buildChunks(docs) {
+  return docs.flatMap(doc =>
+    chunkText(doc.text).map((c, idx) => ({
+      id: `${doc.name}#${idx + 1}`,
+      doc: doc.name,
+      text: c
+    }))
+  );
+}
+
+function retrieve(chunks, query, k = 6) {
+  const scored = chunks
     .map(ch => ({ ...ch, score: scoreChunk(query, ch.text) }))
     .sort((a, b) => b.score - a.score)
     .slice(0, k);
 
   const fallback = scored.every(s => s.score === 0);
   if (fallback) {
-    const preferred = KB_CHUNKS.filter(ch => ["about.md", "faq.md"].includes(ch.doc)).slice(0, k);
+    const preferred = chunks.filter(ch => ["about.md", "faq.md"].includes(ch.doc)).slice(0, k);
     return preferred.length ? preferred : scored;
   }
   return scored;
@@ -63,7 +84,12 @@ export default async (req) => {
   try {
     const { message, history = [] } = await req.json();
 
-    const top = retrieve(message, 7);
+    // Combine static files with dynamically uploaded Blob content
+    const blobDocs = await loadBlobContent();
+    const allDocs = [...KB_STATIC, ...blobDocs];
+    const allChunks = buildChunks(allDocs);
+
+    const top = retrieve(allChunks, message, 7);
     const context = top.map(t => `SOURCE: ${t.doc}\n${t.text}`).join("\n\n---\n\n");
     const sources = [...new Set(top.map(t => t.doc))];
 

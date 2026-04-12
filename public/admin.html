@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Content Manager</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .admin-form { display:flex; flex-direction:column; gap:10px; margin-bottom:20px; }
+      .admin-form input, .admin-form textarea {
+        padding:12px 14px; border-radius:14px; border:1px solid #262a3f;
+        background:#0f111a; color:#e7e7e7; font-family:inherit;
+      }
+      .admin-form textarea { min-height:120px; resize:vertical; }
+      .admin-form button {
+        align-self:flex-start; padding:12px 20px; border-radius:14px;
+        border:1px solid #2a2e44; background:#141622; color:#e7e7e7; cursor:pointer;
+      }
+      .admin-form button:hover { border-color:#5a64ff; }
+      .entry-list { display:flex; flex-direction:column; gap:10px; }
+      .entry-card {
+        background:#141622; border:1px solid #2a2e44; border-radius:14px;
+        padding:14px; display:flex; justify-content:space-between; align-items:flex-start;
+      }
+      .entry-card .info { flex:1; margin-right:14px; }
+      .entry-card .info h3 { margin:0 0 6px; font-size:16px; }
+      .entry-card .info p { margin:0; opacity:.85; font-size:14px; white-space:pre-wrap; max-height:100px; overflow:hidden; }
+      .entry-card button {
+        padding:8px 14px; border-radius:10px; border:1px solid #442a2a;
+        background:#221414; color:#ff6b6b; cursor:pointer; flex-shrink:0;
+      }
+      .entry-card button:hover { border-color:#ff4444; }
+      .alert { padding:10px 14px; border-radius:10px; margin-bottom:14px; }
+      .alert-error { background:#2a1414; border:1px solid #442a2a; color:#ff6b6b; }
+      .alert-success { background:#142a14; border:1px solid #2a442a; color:#6bff6b; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <h1>Content Manager</h1>
+        <p class="sub">Add and manage knowledge base entries. Duplicate names are not allowed.</p>
+      </header>
+
+      <div id="alert"></div>
+
+      <section class="admin-form">
+        <input id="name-input" placeholder="Entry name (e.g. Skills, Hobbies)" autocomplete="off" />
+        <textarea id="text-input" placeholder="Content text..."></textarea>
+        <button id="add-btn">Add entry</button>
+      </section>
+
+      <h2>Uploaded entries</h2>
+      <div id="entry-list" class="entry-list"></div>
+
+      <footer class="footer" style="margin-top:20px;">
+        <a href="/">Back to chat</a>
+      </footer>
+    </main>
+
+    <script>
+      const alertEl = document.getElementById("alert");
+      const nameInput = document.getElementById("name-input");
+      const textInput = document.getElementById("text-input");
+      const addBtn = document.getElementById("add-btn");
+      const listEl = document.getElementById("entry-list");
+
+      function showAlert(msg, type) {
+        alertEl.className = `alert alert-${type}`;
+        alertEl.textContent = msg;
+        setTimeout(() => { alertEl.textContent = ""; alertEl.className = ""; }, 5000);
+      }
+
+      async function loadEntries() {
+        const res = await fetch("/.netlify/functions/content");
+        const data = await res.json();
+        listEl.innerHTML = "";
+        if (!data.entries?.length) {
+          listEl.innerHTML = '<p style="opacity:.6">No uploaded entries yet.</p>';
+          return;
+        }
+        for (const entry of data.entries) {
+          const card = document.createElement("div");
+          card.className = "entry-card";
+          card.innerHTML = `
+            <div class="info">
+              <h3>${escHtml(entry.name)}</h3>
+              <p>${escHtml(entry.text)}</p>
+            </div>`;
+          const btn = document.createElement("button");
+          btn.textContent = "Delete";
+          btn.onclick = () => deleteEntry(entry.key, entry.name);
+          card.appendChild(btn);
+          listEl.appendChild(card);
+        }
+      }
+
+      function escHtml(s) {
+        return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+      }
+
+      addBtn.addEventListener("click", async () => {
+        const name = nameInput.value.trim();
+        const text = textInput.value.trim();
+        if (!name || !text) {
+          showAlert("Both name and text are required.", "error");
+          return;
+        }
+        addBtn.disabled = true;
+        addBtn.textContent = "Adding...";
+        try {
+          const res = await fetch("/.netlify/functions/content", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, text }),
+          });
+          const data = await res.json();
+          if (!res.ok) {
+            showAlert(data.error || "Something went wrong.", "error");
+            return;
+          }
+          showAlert(`"${name}" added successfully!`, "success");
+          nameInput.value = "";
+          textInput.value = "";
+          await loadEntries();
+        } catch (err) {
+          showAlert(err.message, "error");
+        } finally {
+          addBtn.disabled = false;
+          addBtn.textContent = "Add entry";
+        }
+      });
+
+      async function deleteEntry(key, name) {
+        if (!confirm(`Delete "${name}"?`)) return;
+        await fetch(`/.netlify/functions/content?key=${encodeURIComponent(key)}`, {
+          method: "DELETE",
+        });
+        showAlert(`"${name}" deleted.`, "success");
+        await loadEntries();
+      }
+
+      loadEntries();
+    </script>
+  </body>
+</html>
