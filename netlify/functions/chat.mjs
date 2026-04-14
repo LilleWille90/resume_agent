@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import fs from "node:fs";
 import path from "node:path";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI();
 
 function chunkText(text, chunkSize = 900, overlap = 120) {
   const chunks = [];
