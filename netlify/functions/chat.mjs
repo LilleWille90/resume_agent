@@ -1,8 +1,8 @@
-import OpenAI from "openai";
+import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
 
-const openai = new OpenAI();
+const anthropic = new Anthropic();
 
 function chunkText(text, chunkSize = 900, overlap = 120) {
   const chunks = [];
@@ -85,16 +85,11 @@ Returnera svaret i JSON med nycklarna: answer, suggested_questions (array).
 
     // Begränsa history lite (bra för kostnad/latens)
     const trimmedHistory = history.slice(-8).map(m => ({
-      role: m.role,
+      role: m.role === "assistant" ? "assistant" : "user",
       content: m.content
     }));
 
-    const input = [
-      { role: "system", content: system },
-      {
-        role: "user",
-        content:
-`CONTEXT:
+    const userMessage = `CONTEXT:
 ${context}
 
 CHAT HISTORY:
@@ -103,16 +98,16 @@ ${trimmedHistory.map(m => `${m.role.toUpperCase()}: ${m.content}`).join("\n")}
 QUESTION:
 ${message}
 
-Svara som JSON: {"answer":"...","suggested_questions":["...","..."]}`
-      }
-    ];
+Svara som JSON: {"answer":"...","suggested_questions":["...","..."]}`;
 
-    const resp = await openai.responses.create({
-      model: process.env.OPENAI_MODEL || "gpt-5.2",
-      input
+    const resp = await anthropic.messages.create({
+      model: process.env.CLAUDE_RESUME_AGENT || "claude-sonnet-4-5",
+      max_tokens: 1024,
+      system,
+      messages: [{ role: "user", content: userMessage }]
     });
 
-    const text = resp.output_text || "";
+    const text = resp.content?.[0]?.text || "";
     let parsed;
     try {
       parsed = JSON.parse(text);
