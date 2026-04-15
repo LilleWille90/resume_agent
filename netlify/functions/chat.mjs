@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import fs from "node:fs";
 import path from "node:path";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI();
 
 function chunkText(text, chunkSize = 900, overlap = 120) {
   const chunks = [];
@@ -70,7 +70,6 @@ export default async (req) => {
     const sources = [...new Set(top.map(t => t.doc))];
 
     const system = `
-const system = `
 Du är en rekryterar-assistent som representerar kandidaten Mattias Willner.
 Du pratar alltid OM Mattias i tredje person (han/Mattias). Du får aldrig skriva "jag", "mig", "min" när du beskriver Mattias.
 Om frågan gäller något personligt som inte finns i källorna: säg att du inte vet och föreslå att kontakta Mattias direkt.
