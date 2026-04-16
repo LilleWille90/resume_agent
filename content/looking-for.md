@@ -21,11 +21,11 @@ Less interested in:
 - Close collaboration with engineering and design — embedded in the work, not above it
 
 ## Company stage
-Open to both scale-ups and larger tech companies, as long as the team culture allows for speed and ownership. Has experience in enterprise (Electrolux) and values the impact that comes with scale, but is equally curious about faster-moving environments.
+Preference for scale-ups — companies past the early startup chaos but not yet slowed down by enterprise bureaucracy. Environments where there's a clear product strategy, some structure, but still room to move fast and have real ownership. Less interested in very early-stage startups or large corporations.
 
 ## Work setup
-- Based in Stockholm
-- Prefers hybrid setup
+- Based in Stockholm, looking to stay within the Stockholm greater area
+- Hybrid setup
 - Open to international teams and some travel
 
 ## One thing I'd love in my next role
