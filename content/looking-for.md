@@ -1,44 +1,32 @@
 # What Mattias is looking for
 
 ## Role type
-<!-- Be specific — what's the dream role? -->
-- Title: [e.g. "Senior Product Manager or Group PM / Head of Product"]
-- Scope: [e.g. "Own a domain end-to-end — not a feature PM executing someone else's strategy"]
-- Team setup: [e.g. "Close to engineering and design, embedded in a cross-functional team"]
+Senior Product Manager role in a challenging tech environment, with real ownership of a product area end-to-end — not a feature PM executing someone else's strategy.
 
 ## Domain preferences
-<!-- What kind of products excite you? Rank or describe. -->
-Strong interest in:
-- [e.g. Consumer-facing apps with real user impact]
-- [e.g. Products with data/integrations complexity (IoT, APIs, platforms)]
-- [e.g. AI-native or AI-augmented products]
-
-Open to:
-- [e.g. B2B tools, internal platforms, developer products]
+Strong preference for user-facing products where there's meaningful room to improve the experience:
+- Mobile app development (primary preference)
+- Web applications with high user engagement
+- Products with large user bases where small improvements have outsized impact
+- Consumer-facing experiences with data and integration complexity
 
 Less interested in:
-- [e.g. Pure growth/marketing PM roles, ad-tech]
+- Pure internal tooling with no direct user impact
+- PM roles that are primarily coordination without product ownership
+
+## What makes a role exciting
+- A product with real complexity — platforms, data, integrations, connected experiences
+- Flexibility to identify problems and propose new directions, not just execute a defined roadmap
+- A team that values experimentation and treats "we learned something" as a valid outcome
+- Close collaboration with engineering and design — embedded in the work, not above it
 
 ## Company stage
-<!-- Startup, scale-up, enterprise? What feels right? -->
-- [e.g. "Scale-up (Series B–D) or large tech company with startup-like team culture"]
-- [e.g. "I've worked in enterprise (Electrolux) and love the impact — but I'm curious about a faster-moving environment"]
+Open to both scale-ups and larger tech companies, as long as the team culture allows for speed and ownership. Has experience in enterprise (Electrolux) and values the impact that comes with scale, but is equally curious about faster-moving environments.
 
 ## Work setup
-- Location: Stockholm-based
-- Preference: [e.g. "Hybrid — 2–3 days in office, comfortable with some remote"]
-- Open to relocation: [Yes/No]
-- Open to international teams: Yes
-
-## What I'm NOT looking for
-- [e.g. "PM roles that are purely process/coordination without ownership"]
-- [e.g. "Companies where PMs are order-takers for engineering"]
-- [e.g. "Roles without a clear product strategy or north star"]
-
-## Timeline
-<!-- When could you start? -->
-Available: [e.g. "2 months notice period" or "Looking to move in Q3 2025"]
+- Based in Stockholm
+- Prefers hybrid setup
+- Open to international teams and some travel
 
 ## One thing I'd love in my next role
-<!-- Something personal and honest — shows self-awareness -->
-[e.g. "A team where experimentation is expected, not exceptional — where 'we tried it and learned' is a valid outcome"]
+A product where the work visibly changes how people experience something — where you can point to a feature in the hands of real users and know you made it better.
