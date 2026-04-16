@@ -1,3 +1,7 @@
 [build]
   publish = "public"
   functions = "netlify/functions"
+
+[functions]
+  included_files = ["content/**"]
+  node_bundler = "esbuild"
