@@ -1,41 +1,39 @@
 # Electrolux — Wellbeing Domain Deep Dive
 
 ## Context
-Electrolux OneApp is a shared platform powering multiple brand apps (AEG, Electrolux, Frigidaire, etc.) across iOS and Android globally. The Wellbeing domain covers connected air purifiers, ACs, and robot vacuums — products that sit at the intersection of hardware, firmware, and software.
+Electrolux OneApp is a shared platform powering multiple brand apps (AEG, Electrolux, and others) across iOS and Android globally. The Wellbeing domain covers connected air purifiers, ACs, and robot vacuums — products at the intersection of hardware, firmware, and software.
 
-## What I own
-<!-- What's your actual scope? What does "owning a domain" mean day to day? -->
-- [e.g. "Roadmap and strategy for all Wellbeing features across the OneApp platform — shared by AEG and Electrolux brands"]
-- [e.g. "Feature discovery, prioritisation, delivery, and post-launch iteration"]
-- [e.g. "Representing user needs in cross-domain decisions (platform architecture, shared components, etc.)"]
+## What Mattias owns
+End-to-end ownership of the user-facing product experience in the Wellbeing domain — from discovery and roadmap through delivery and post-launch iteration. Owning "user-facing" in this context means being the connecting thread across every layer that shapes the experience: frontend, backend, cloud infrastructure, and device firmware. A change in any of these layers can affect what the user sees and feels, so the role requires holding all of that together.
+
+## Team setup
+Cross-functional team of 12 people — developers, testers, and designers. Mattias has led and collaborated with several distinct team configurations:
+- Fully remote team based in Malaysia
+- Stockholm-based team (on-site)
+- Hybrid team across locations
+
+He has worked across frontend, full-stack, and backend-focused teams, adapting his ways of working to each setup.
+
+## What makes this role genuinely complex
+This is not a standalone app PM role. The complexity comes from the layered nature of connected products:
+
+- **Multi-layer ownership**: A single user-facing feature might touch iOS/Android frontend, a backend microservice, cloud infrastructure, and firmware running on the physical device. Mattias needs to understand dependencies and sequencing across all of these.
+- **Hardware/software misalignment**: Firmware release cycles don't match app release cadences — coordinating features across these timelines is a constant challenge.
+- **Multi-brand platform**: Features need to work across multiple brands (AEG, Electrolux) on a shared codebase, so every decision has both brand-level and platform-level implications.
+- **Cross-team, cross-geography**: Leading teams across Stockholm and Malaysia in different timezone and working-style setups requires intentional communication and trust-building.
+
+## Key initiatives
+<!-- Add 2–3 initiatives beyond the pollen automation case -->
+- Pollen-based automation (see case-pollen-automation.md): combined pollen APIs, geolocation and on-device sensors to create a proactive automation feature — 25%+ adoption among active users within two sprints
+- [Initiative 2: Problem → approach → result]
+- [Initiative 3: Problem → approach → result]
 
 ## Scale
-<!-- Help recruiters understand the real scope -->
-- App downloads / MAU: [if you can share, e.g. "X million downloads across markets"]
-- Markets: [e.g. "Live in 30+ markets across Europe and North America"]
-- Devices supported: [e.g. "X connected device models"]
-- Team size: [e.g. "Cross-functional team of ~8 across iOS, Android, backend, firmware, data, UX"]
+- Markets: Global — all major regions worldwide
+- Brands: Mattias owns 3 major brand apps on the shared platform (Electrolux, AEG, Frigidaire) plus a B-brand app covering all remaining brands that need connected appliance support
+- Users: Millions of monthly active users
+- Seasonality: Significant traffic spikes on certain appliances (e.g. ACs in summer), which adds complexity around release timing, infrastructure scaling, and feature rollouts
 
-## The hard parts of this role
-<!-- What makes it genuinely complex? Platform PM is different from standalone app PM -->
-- [e.g. "Building features that work across multiple brands without fragmenting the platform — every decision has brand-level and engineering implications"]
-- [e.g. "Hardware/firmware release cycles don't match software release cadences — syncing these requires constant stakeholder negotiation"]
-- [e.g. "Serving multiple brand owners (AEG vs. Electrolux) with different priorities on a shared codebase"]
-- [e.g. "Compliance and legal review (cybersecurity, GDPR) adds real lead time to seemingly simple features"]
-
-## Key initiatives I've driven
-<!-- 2–3 concrete projects beyond the pollen case -->
-1. [Project name]: [Problem → what you did → outcome with numbers if possible]
-2. [Project name]: [Problem → what you did → outcome with numbers if possible]
-3. [Project name]: [Problem → what you did → outcome with numbers if possible]
-
-## Metrics I track
-<!-- What does success look like in your domain? -->
-- [e.g. "Feature adoption rate (30/60/90 day)"]
-- [e.g. "Automation engagement (% of users with active automations)"]
-- [e.g. "Crash-free rate, ANR rate for platform stability"]
-- [e.g. "NPS / CSAT for the Wellbeing domain"]
-- [e.g. "Time-to-value for new device onboarding"]
-
-## What I've learned here that I'll carry forward
-[2–3 honest sentences about what this role has taught you about product, scale, complexity, or yourself as a PM]
+## What this role has taught me
+<!-- A few honest sentences -->
+[e.g. "Working across hardware and software taught me that the hardest product problems aren't technical — they're about aligning teams with fundamentally different release rhythms and success metrics."]
