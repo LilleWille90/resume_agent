@@ -6,11 +6,11 @@
 
 **Contact:** +46 730 490 591 · willner.mattias@gmail.com · Stockholm, Sweden · linkedin.com/in/mattias-willner-904a0465 · [Mattias' Resume Agent](https://mattiaswillner.netlify.app)
 
-Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.
+Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - grounding priorities in customer insight, data and technical constraints.
 
 ## Core strengths
 
-Product Strategy & Roadmaps · Product Leadership · Digital Transformation · Internal Tooling & Workflow Design · AI-enabled Product Innovation · Cross-functional Leadership · Data & Experimentation · Governance, Privacy & Security · Vendor & Stakeholder Management
+Product Strategy & Roadmaps · Product Leadership · Customer Insight & Problem Framing · Digital Transformation · Internal Tooling & Workflow Design · AI-enabled Product Innovation · Cross-functional Leadership · Data & Experimentation · Governance, Privacy & Security · Vendor & Stakeholder Management
 
 ## Experience
 
@@ -20,7 +20,7 @@ Own product strategy and roadmap for the Wellbeing domain in Electrolux OneApp, 
 
 - Lead prioritisation and delivery across mobile, backend, data, firmware, UX, legal and cybersecurity.
 - Build connected-product experiences for air purifiers, ACs and robot vacuums, balancing multi-brand, multi-market, platform and device-release needs.
-- Use analytics, customer insight and experimentation to guide decisions and iteration.
+- Translate customer insight, product data and technical constraints into problem framing, priorities and iteration.
 - Work in an AI-enabled environment with Microsoft Copilot integrated into daily workflows, gaining practical exposure to adoption, productivity use cases and human + AI ways of working.
 
 ### Digitalisation Manager - Epidemic Sound | 2020-2022
