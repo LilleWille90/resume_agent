@@ -1,5 +1,7 @@
 # Case: Resume Agent - a conversational portfolio
 
+What if a recruiter could interview the CV instead of reading it? Resume Agent explores that product idea: a conversational portfolio that helps a recruiter discover the relevant context, evidence and working style through natural questions.
+
 ## Problem
 
 A conventional CV is difficult to explore. Recruiters often need context on scope, product thinking, working style and relevant projects, but a static document makes that discovery slow and one-directional.
@@ -10,7 +12,7 @@ Product owner and builder. Mattias reframed an existing CV chatbot as a focused 
 
 ## How AI is used
 
-Resume Agent is an experiment in making a traditional artifact interactive. Structured knowledge, retrieval and an LLM allow recruiters to ask natural questions and explore the relevant material in conversation, while source grounding keeps answers connected to the underlying CV and case notes.
+The product uses a retrieval-grounded conversational portfolio: structured knowledge, retrieval and an LLM allow recruiters to ask natural questions and explore the relevant material in conversation, while source grounding keeps answers connected to the underlying CV and case notes.
 
 ## Technical approach
 
@@ -22,4 +24,4 @@ Resume Agent is an experiment in making a traditional artifact interactive. Stru
 
 ## Outcome and learning
 
-Resume Agent is live as a portfolio experiment and a small, concrete example of workflow redesign with AI: an otherwise static CV becomes a recruiter-friendly product experience. The central learning is that human-curated, structured knowledge plus conversational AI can make familiar information far more discoverable, useful and engaging.
+Resume Agent is live as a portfolio experiment and a small, concrete example of translating a new capability into a useful workflow: an otherwise static CV becomes a recruiter-friendly product experience. The central learning is that human-curated, structured knowledge plus conversational AI can make familiar information far more discoverable, useful and engaging.

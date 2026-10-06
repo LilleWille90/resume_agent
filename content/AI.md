@@ -1,6 +1,6 @@
 # AI-enabled product development
 
-Mattias uses AI as a product-building capability: combining models, APIs and agentic tools to explore ideas, redesign workflows and build products that a small team can realistically take from concept to working experience. His hands-on work includes BikeMaster, StoryTailor and this Resume Agent.
+Mattias uses AI as a product-building capability: combining models, APIs and agentic tools to explore ideas, redesign workflows and build products that a small team can realistically take from concept to working experience. His hands-on work complements 10+ years of leading product and digital transformation in complex organisations: the goal is to understand what new capabilities mean in practice, then translate them into useful products and workflows. His work includes BikeMaster, StoryTailor and this Resume Agent.
 
 ## How he approaches AI
 

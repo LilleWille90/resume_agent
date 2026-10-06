@@ -1,7 +1,7 @@
 # FAQ (Recruiter-friendly)
 
 ## Can you summarise your background in 30 seconds?
-I’m a Product Manager with 10+ years across consumer apps, IoT and internal tools. Today I own strategy and roadmap for a domain in Electrolux OneApp and lead cross-functional teams across mobile, backend, firmware, data, UX and compliance functions.
+I’m a Product & Transformation Leader with 10+ years across consumer apps, IoT and internal tools. Today I own strategy and roadmap for a domain in Electrolux OneApp and lead cross-functional teams across mobile, backend, firmware, data, UX and compliance functions. Earlier, I led digital workplace and digitalisation initiatives used across complex organisations.
 
 ## What kinds of products do you enjoy most?
 Products with real user impact and meaningful complexity: platforms, data/integrations, multi-market experiences, and connected products where software increases the value of hardware.
@@ -16,7 +16,7 @@ I use funnels, cohorts and usage analytics to prioritise, measure impact, and it
 Social, open-minded, enthusiastic people person; solution-oriented with a creative edge.
 
 ## What’s your AI experience?
-I’ve been building agents/apps myself and I’m motivated by trustworthy AI that integrates deeply with existing systems, iterates fast, and keeps quality high. (For work examples: see my product cases and how I’ve used data/integrations in shipped features.)
+I actively build with models, APIs and agentic tools to understand how new capabilities can change products and workflows. That hands-on work sits alongside my transformation background: I’m most interested in translating AI capabilities into usable product experiences, not technology for its own sake. (For examples, see BikeMaster, StoryTailor and Resume Agent.)
 
 ## What do you want to be asked in an interview?
 - “Walk me through a product decision you changed your mind on and why.”
