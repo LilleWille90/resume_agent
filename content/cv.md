@@ -4,6 +4,8 @@
 
 **Product & Transformation Leader** | Senior Product Manager | Product Lead
 
+**Interactive CV / chat:** mattiaswillner.netlify.app (Ask my CV)
+
 Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.
 
 ## Core strengths

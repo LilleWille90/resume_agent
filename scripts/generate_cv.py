@@ -77,7 +77,8 @@ def main():
     story = [
         p("MATTIAS WILLNER", styles["name"]),
         p("Product &amp; Transformation Leader | Senior Product Manager | Product Lead", styles["headline"]),
-        p("Stockholm, Sweden &nbsp; | &nbsp; mattiaswillner.netlify.app &nbsp; | &nbsp; linkedin.com/in/mattias-willner-904a0465", styles["contact"]),
+        p("Stockholm, Sweden &nbsp; | &nbsp; linkedin.com/in/mattias-willner-904a0465", styles["contact"]),
+        p("Interactive CV / chat: <link href='https://mattiaswillner.netlify.app'><font color='#196a70'>mattiaswillner.netlify.app</font></link> &nbsp; (Ask my CV)", styles["contact"]),
         Spacer(1, 7),
         p("Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.", styles["summary"]),
         p("<b>CORE STRENGTHS</b>&nbsp;&nbsp; Product Strategy &amp; Roadmaps &nbsp;·&nbsp; Product Leadership &nbsp;·&nbsp; Digital Transformation &nbsp;·&nbsp; Internal Tooling &amp; Workflow Design &nbsp;·&nbsp; AI-enabled Product Innovation &nbsp;·&nbsp; Cross-functional Leadership &nbsp;·&nbsp; Data &amp; Experimentation &nbsp;·&nbsp; Governance, Privacy &amp; Security &nbsp;·&nbsp; Vendor &amp; Stakeholder Management", styles["strengths"]),
