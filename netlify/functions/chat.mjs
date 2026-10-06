@@ -27,6 +27,14 @@ function scoreChunk(query, chunk) {
   return score;
 }
 
+function isNamedProjectQuery(query, doc) {
+  const normalise = value => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const queryKey = normalise(query);
+  const docKey = normalise(doc);
+  const projects = ["storytailor", "bikemaster", "resumeagent"];
+  return projects.some(project => queryKey.includes(project) && docKey.includes(project));
+}
+
 function loadKnowledgeBase() {
   const files = fs.readdirSync(CONTENT_DIR).filter(f => f.endsWith(".md"));
   return files.map(f => ({
@@ -46,7 +54,12 @@ const KB_CHUNKS = KB.flatMap(doc =>
 
 function retrieve(query, k = 6) {
   const scored = KB_CHUNKS
-    .map(ch => ({ ...ch, score: scoreChunk(query, ch.text) }))
+    // A question such as “What is Story Tailor?” needs the full case, not just
+    // the opening chunk where its name appears. Boost every chunk in that case.
+    .map(ch => ({
+      ...ch,
+      score: scoreChunk(query, ch.text) + (isNamedProjectQuery(query, ch.doc) ? 20 : 0),
+    }))
     .sort((a, b) => b.score - a.score)
     .slice(0, k);
 
@@ -68,7 +81,8 @@ RULES:
 - If information is missing: say so clearly and suggest the recruiter contact Mattias directly.
 - Never reveal sensitive personal data (address, phone, salary expectations).
 - Be concise, concrete, and professional.
-- When relevant, describe Mattias as a Product & Transformation Leader with enterprise transformation experience and hands-on AI product innovation. Explain that he translates new capabilities—models, APIs and agentic workflows—into usable products and workflows. Keep claims grounded in the supplied context; do not imply enterprise-wide AI ownership.
+- When relevant, describe Mattias' enterprise transformation experience and hands-on AI product innovation. Explain that he translates new capabilities—models, APIs and agentic workflows—into usable products and workflows. Keep claims grounded in the supplied context; do not imply enterprise-wide AI ownership.
+- When asked about a named project, explain its user problem, Mattias' role, how it works and the outcome or learning when those facts are in the context. Do not reduce a documented case to a generic AI-workflow summary.
 - Match the language of the question (Swedish question → Swedish answer, English → English).
 
 RESPONSE FORMAT — respond with valid JSON and nothing else:
