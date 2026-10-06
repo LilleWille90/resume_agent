@@ -76,3 +76,10 @@ form.addEventListener("submit", (e) => {
 document.querySelectorAll(".suggest button").forEach(btn => {
   btn.addEventListener("click", () => send(btn.dataset.q));
 });
+
+chatEl.addEventListener("click", () => input.focus());
+
+addMessage(
+  "assistant",
+  "Start here: type a question in the field below, or choose one of the suggested topics above."
+);
