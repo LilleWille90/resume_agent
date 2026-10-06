@@ -76,7 +76,6 @@ def main():
 
     story = [
         p("MATTIAS WILLNER", styles["name"]),
-        p("Product &amp; Transformation Leader | Senior Product Manager | Product Lead", styles["headline"]),
         p("<link href='tel:+46730490591'><font color='#52616d'>+46 730 490 591</font></link> &nbsp; | &nbsp; <link href='mailto:willner.mattias@gmail.com'><font color='#52616d'>willner.mattias@gmail.com</font></link> &nbsp; | &nbsp; Stockholm, Sweden", styles["contact"]),
         p("<link href='https://www.linkedin.com/in/mattias-willner-904a0465/'><font color='#52616d'>linkedin.com/in/mattias-willner-904a0465</font></link> &nbsp; | &nbsp; <link href='https://mattiaswillner.netlify.app'><font color='#196a70'>Mattias' Resume Agent</font></link>", styles["contact"]),
         Spacer(1, 7),

@@ -2,8 +2,6 @@
 
 ## Positioning
 
-**Product & Transformation Leader** | Senior Product Manager | Product Lead
-
 **Contact:** +46 730 490 591 · willner.mattias@gmail.com · Stockholm, Sweden · linkedin.com/in/mattias-willner-904a0465 · [Mattias' Resume Agent](https://mattiaswillner.netlify.app)
 
 Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - grounding priorities in customer insight, data and technical constraints.
