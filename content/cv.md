@@ -4,7 +4,7 @@
 
 **Product & Transformation Leader** | Senior Product Manager | Product Lead
 
-**Contact:** +46 730 490 591 · willner.mattias@gmail.com · Stockholm, Sweden · linkedin.com/in/mattias-willner-904a0465
+**Contact:** +46 730 490 591 · willner.mattias@gmail.com · Stockholm, Sweden · linkedin.com/in/mattias-willner-904a0465 · [Mattias' Resume Agent](https://mattiaswillner.netlify.app)
 
 Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.
 
@@ -42,7 +42,7 @@ Led internal digitalisation through tooling, automation and workflow improvement
 
 **StoryTailor** - Built an end-to-end service turning a spoken story into a printed children's book: transcription, story and character analysis, page structure, prompts, image generation, PDF/layout, payment and Lulu print fulfilment using multiple AI services.
 
-**Resume Agent** - Want to know more? Reach out directly to me, or ask [Mattias' Resume Agent](https://mattiaswillner.netlify.app) - always available to answer questions about my experience, projects and working style.
+**Resume Agent** - Want to know more? Reach out directly to me, or ask Mattias' Resume Agent - always available to answer questions about my experience, projects and working style.
 
 ## Education & credentials
 

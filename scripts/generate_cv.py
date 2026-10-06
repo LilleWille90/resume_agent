@@ -78,7 +78,7 @@ def main():
         p("MATTIAS WILLNER", styles["name"]),
         p("Product &amp; Transformation Leader | Senior Product Manager | Product Lead", styles["headline"]),
         p("<link href='tel:+46730490591'><font color='#52616d'>+46 730 490 591</font></link> &nbsp; | &nbsp; <link href='mailto:willner.mattias@gmail.com'><font color='#52616d'>willner.mattias@gmail.com</font></link> &nbsp; | &nbsp; Stockholm, Sweden", styles["contact"]),
-        p("<link href='https://www.linkedin.com/in/mattias-willner-904a0465/'><font color='#52616d'>linkedin.com/in/mattias-willner-904a0465</font></link>", styles["contact"]),
+        p("<link href='https://www.linkedin.com/in/mattias-willner-904a0465/'><font color='#52616d'>linkedin.com/in/mattias-willner-904a0465</font></link> &nbsp; | &nbsp; <link href='https://mattiaswillner.netlify.app'><font color='#196a70'>Mattias' Resume Agent</font></link>", styles["contact"]),
         Spacer(1, 7),
         p("Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.", styles["summary"]),
         p("<b>CORE STRENGTHS</b>&nbsp;&nbsp; Product Strategy &amp; Roadmaps &nbsp;·&nbsp; Product Leadership &nbsp;·&nbsp; Digital Transformation &nbsp;·&nbsp; Internal Tooling &amp; Workflow Design &nbsp;·&nbsp; AI-enabled Product Innovation &nbsp;·&nbsp; Cross-functional Leadership &nbsp;·&nbsp; Data &amp; Experimentation &nbsp;·&nbsp; Governance, Privacy &amp; Security &nbsp;·&nbsp; Vendor &amp; Stakeholder Management", styles["strengths"]),
@@ -102,7 +102,7 @@ def main():
     story += [
         p("<b>BikeMaster</b> - Founder and product builder for a native iOS/watchOS connected cycling product. Uses GPS, IMU, sensors, weather and route intelligence; AI-assisted development accelerates delivery while core ride logic remains deterministic.", styles["project"]),
         p("<b>StoryTailor</b> - Built an end-to-end service turning a spoken story into a printed children's book: transcription, story and character analysis, page structure, prompts, image generation, PDF/layout, payment and Lulu print fulfilment using multiple AI services.", styles["project"]),
-        p("<b>Resume Agent</b> - Want to know more? Reach out directly to me, or ask <link href='https://mattiaswillner.netlify.app'><font color='#196a70'>Mattias' Resume Agent</font></link> - always available to answer questions about my experience, projects and working style.", styles["project"]),
+        p("<b>Resume Agent</b> - Want to know more? Reach out directly to me, or ask Mattias' Resume Agent - always available to answer questions about my experience, projects and working style.", styles["project"]),
     ]
     story += section("Education & Credentials", styles)
     story += [
