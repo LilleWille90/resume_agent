@@ -8,6 +8,7 @@ Own product strategy and roadmap for the Wellbeing domain in Electrolux OneApp, 
 - Build data-informed connected-product experiences for air purifiers, ACs and robot vacuums.
 - Balance multi-brand and multi-market needs with platform dependencies, device release rhythms and consumer experience quality.
 - Use analytics, customer insight and experimentation to steer product decisions and iteration.
+- Work in an AI-enabled environment with Microsoft Copilot integrated into daily workflows, providing practical exposure to adoption, productivity use cases and human + AI ways of working. This is practical workplace experience, not a claim of owning an enterprise-wide rollout.
 
 ## Digitalisation Manager - Epidemic Sound (2020-2022)
 
