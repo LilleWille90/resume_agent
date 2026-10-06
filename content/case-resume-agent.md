@@ -1,8 +1,8 @@
-# Case: Resume Agent - a transparent conversational portfolio
+# Case: Resume Agent - a conversational portfolio
 
 ## Problem
 
-A conventional CV is difficult to explore. Recruiters often need context on scope, trade-offs, working style and relevant projects, but should not have to search across a long document or receive claims that cannot be supported.
+A conventional CV is difficult to explore. Recruiters often need context on scope, product thinking, working style and relevant projects, but a static document makes that discovery slow and one-directional.
 
 ## Mattias' role
 
@@ -10,7 +10,7 @@ Product owner and builder. Mattias reframed an existing CV chatbot as a focused 
 
 ## How AI is used
 
-The assistant uses retrieval over a maintained, version-controlled knowledge base of CV and case material. It is instructed to answer only from supplied context, acknowledge missing information and identify the sources used for each answer.
+Resume Agent is an experiment in making a traditional artifact interactive. Structured knowledge, retrieval and an LLM allow recruiters to ask natural questions and explore the relevant material in conversation, while source grounding keeps answers connected to the underlying CV and case notes.
 
 ## Technical approach
 
@@ -18,8 +18,8 @@ The assistant uses retrieval over a maintained, version-controlled knowledge bas
 - Markdown knowledge base kept alongside the site and included in the function bundle
 - Lightweight retrieval that selects relevant source excerpts for each question
 - Anthropic API for concise, language-matched answers with structured response handling
-- Explicit source labels and conservative system instructions to reduce unsupported claims
+- Source labels and instructions that keep answers grounded in the maintained material
 
 ## Outcome and learning
 
-Resume Agent is live as a portfolio experiment and a practical example of AI-enabled communication. The central learning is that a narrow, well-governed knowledge base is more credible and useful than a broad chatbot that guesses.
+Resume Agent is live as a portfolio experiment and a small, concrete example of workflow redesign with AI: an otherwise static CV becomes a recruiter-friendly product experience. The central learning is that human-curated, structured knowledge plus conversational AI can make familiar information far more discoverable, useful and engaging.
