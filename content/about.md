@@ -1,21 +1,21 @@
-# Mattias Willner — Product Manager
+# Mattias Willner - Product & Transformation Leader
 
-Product Manager with 10+ years in software and complex IT systems across both frontend and backend teams. I’ve shipped products end-to-end in consumer apps, IoT and internal tools, combining strong product sense and systems thinking to create high-impact solutions. I’m social and open-minded, a music nerd, and described by colleagues as an enthusiastic people person.  
-(Source: CV/Resume)
+Product and transformation leader with 10+ years of experience turning complex needs into useful digital products, services and ways of working. Mattias combines product leadership, technical fluency and pragmatic delivery across consumer apps, connected products and internal tooling.
 
-## Current
-Product Manager at Electrolux, owning product strategy and roadmap for the Wellbeing domain in Electrolux OneApp — a shared platform powering multiple brand apps across iOS and Android.
+He currently owns product strategy and roadmap for the Wellbeing domain in Electrolux OneApp, a shared mobile platform across multiple brands and markets. Earlier, he led digitalisation initiatives at Epidemic Sound and worked in complex public-sector, regulated and service-design environments.
 
-## What I’m looking for
-Product roles where I can own an area end-to-end, work close to engineering/design/data, and build customer-facing experiences (preferably with complexity: platforms, data, integrations, IoT/AI).
+## Focus
 
-## Core strengths
-- End-to-end product ownership & roadmap strategy
-- Consumer-facing mobile apps (multi-brand / multi-market)
-- Cross-functional leadership (mobile, backend, firmware, data, UX, legal, cybersecurity)
-- Product discovery, experimentation, and data-driven prioritisation (funnels, cohorts, KPIs)
-- Strong technical fluency (soundboard in complex decisions)
+- Product leadership: strategy, discovery, prioritisation, delivery and iteration
+- Digital transformation: internal tools, workflow design, adoption and change
+- AI-enabled product development: using AI responsibly to prototype, build and improve products
+- Governance: making scope, data handling, quality, dependencies and decision rights visible early
+- Cross-functional leadership across product, engineering, design, data, legal and security
+
+## AI perspective
+
+Mattias is a hands-on builder who uses AI in personal product work and in day-to-day problem solving. He is interested in AI where it improves a real workflow or customer experience, with clear boundaries for quality, privacy and human accountability. He does not claim enterprise-wide AI ownership; his strength is connecting opportunity, product craft and responsible execution.
 
 ## Links
+
 - LinkedIn: https://www.linkedin.com/in/mattias-willner-904a0465/
-- Contact: (prefer linking to LinkedIn or email rather than phone on a public bot)

@@ -1,41 +1,40 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Ask Mattias' AI</title>
+    <meta name="description" content="Mattias Willner - Product & Transformation Leader. Product leadership, digital transformation and AI-enabled product development." />
+    <title>Mattias Willner | Product & Transformation Leader</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <main class="wrap">
-      <header class="header">
-        <h1>Ask my AI about my background</h1>
-        <p class="sub">
-          Svar baserat på mitt CV och mina case-notes. Om något saknas: fråga mig direkt.
-        </p>
+      <header class="hero">
+        <p class="eyebrow">Mattias Willner</p>
+        <h1>Product &amp; Transformation Leader</h1>
+        <p class="intro">I lead digital products and transformation work where product strategy, internal tooling and responsible AI meet. I work hands-on with teams to turn complex needs into useful, governable experiences.</p>
+        <div class="hero-links"><a class="button primary" href="/Mattias-CV.pdf" target="_blank" rel="noreferrer">Download CV</a><a class="button" href="https://www.linkedin.com/in/mattias-willner-904a0465/" target="_blank" rel="noreferrer">LinkedIn</a></div>
       </header>
 
-      <section class="suggest">
-        <button data-q="Vilka resultat är du mest stolt över?">Resultat jag är stolt över</button>
-        <button data-q="Berätta om ett svårt stakeholder-läge du löst.">Stakeholder-case</button>
-        <button data-q="Vilken typ av roll söker du nu?">Vad jag söker</button>
-        <button data-q="Ge en kort sammanfattning av din AI-erfarenhet.">AI-erfarenhet</button>
+      <section class="profile" aria-labelledby="profile-title">
+        <p class="eyebrow">Profile</p><h2 id="profile-title">Product leadership with delivery depth</h2>
+        <p>More than ten years across connected consumer products, complex delivery environments and internal digitalisation. My approach combines discovery, prioritisation and cross-functional delivery with clear attention to data, quality, dependencies and adoption.</p>
+        <ul class="strengths"><li>Product strategy, roadmaps and end-to-end delivery</li><li>Digital transformation and internal tools that people adopt</li><li>AI-enabled product development with practical guardrails</li><li>Cross-functional leadership across engineering, design, data, legal and security</li></ul>
       </section>
 
-      <section id="chat" class="chat"></section>
+      <section class="work" aria-labelledby="work-title">
+        <p class="eyebrow">Selected AI &amp; Product Work</p><h2 id="work-title">Building with AI, grounded in the product</h2>
+        <div class="case-grid">
+          <article class="case-card"><p class="case-tag">Active beta</p><h3>BikeMaster</h3><p class="case-summary">A privacy-conscious cycling companion that turns local ride and sensor data into useful route intelligence.</p><dl><div><dt>Problem</dt><dd>Make repeated rides more understandable without treating sensitive location and health data as an afterthought.</dd></div><div><dt>Role</dt><dd>Founder and product builder across concept, experience, technical direction and validation.</dd></div><div><dt>AI</dt><dd>AI-supported development and a deliberately bounded, explanation-focused AI concept based on curated facts.</dd></div><div><dt>Learning</dt><dd>Useful AI starts with a clear data boundary, consent and reliable core product behaviour.</dd></div></dl></article>
+          <article class="case-card"><p class="case-tag">End-to-end side project</p><h3>StoryTailor</h3><p class="case-summary">A service that turns a parent's voice recording into a personal, illustrated and printable children's book.</p><dl><div><dt>Problem</dt><dd>Preserve personal stories without requiring writing, design or print-production expertise.</dd></div><div><dt>Role</dt><dd>Solo product builder, from customer journey and UX through engineering and fulfilment.</dd></div><div><dt>AI</dt><dd>Orchestrated transcription, structured story work and illustration generation inside a complete service flow.</dd></div><div><dt>Learning</dt><dd>Multi-step AI products need quality checks, recovery paths and careful orchestration.</dd></div></dl></article>
+          <article class="case-card"><p class="case-tag">This site</p><h3>Resume Agent</h3><p class="case-summary">A conversational portfolio that helps recruiters explore relevant context without unsupported claims.</p><dl><div><dt>Problem</dt><dd>A CV alone can make it hard to find relevant scope, context and project evidence.</dd></div><div><dt>Role</dt><dd>Product owner and builder, evolving a CV chatbot into a transparent portfolio.</dd></div><div><dt>AI</dt><dd>Retrieval over a maintained knowledge base, with source labels and instructions to acknowledge gaps.</dd></div><div><dt>Learning</dt><dd>A narrow, well-governed assistant is more credible than a broad chatbot that guesses.</dd></div></dl></article>
+        </div>
+      </section>
 
-      <form id="form" class="composer">
-        <input id="input" placeholder="Ställ en fråga…" autocomplete="off" />
-        <button type="submit">Skicka</button>
-      </form>
+      <section class="ask" aria-labelledby="ask-title"><div class="ask-heading"><p class="eyebrow">Ask my resume</p><h2 id="ask-title">Explore the background behind the CV</h2><p>Answers are based on the CV and documented case notes. If something is not covered, the assistant will say so.</p></div><div class="suggest"><button data-q="Summarise Mattias' product and transformation background.">Background</button><button data-q="What is Mattias' hands-on AI experience?">AI experience</button><button data-q="Tell me about BikeMaster and its approach to privacy.">BikeMaster</button><button data-q="Tell me about StoryTailor and what Mattias learned from building it.">StoryTailor</button></div><section id="chat" class="chat" aria-live="polite" aria-label="Resume conversation"></section><form id="form" class="composer"><label class="sr-only" for="input">Ask a question</label><input id="input" placeholder="Ask about my background, product work or AI projects..." autocomplete="off" /><button type="submit">Ask</button></form></section>
 
-      <footer class="footer">
-        <a href="/Mattias-CV.pdf" target="_blank" rel="noreferrer">Ladda ner CV</a>
-        <span>•</span>
-        <a href="https://www.linkedin.com/in/mattias-willner-904a0465/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </footer>
+      <footer class="footer"><span>Stockholm, Sweden</span><span aria-hidden="true">•</span><a href="/Mattias-CV.pdf" target="_blank" rel="noreferrer">CV</a><span aria-hidden="true">•</span><a href="https://www.linkedin.com/in/mattias-willner-904a0465/" target="_blank" rel="noreferrer">LinkedIn</a></footer>
     </main>
-
     <script src="/app.js"></script>
   </body>
 </html>

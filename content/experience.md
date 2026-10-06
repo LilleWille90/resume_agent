@@ -1,45 +1,38 @@
 # Experience
 
-## Product Manager — Electrolux AB (2022–present)
-Own the product strategy and roadmap for the Wellbeing domain in Electrolux OneApp — a shared platform powering multiple brand apps across iOS and Android.
+## Product Manager - Electrolux AB (2022-present)
 
-Key responsibilities:
-- Lead cross-functional teams (frontend, backend, firmware, data, UX, legal, cybersecurity)
-- Drive product analytics (funnels, cohorts, usage) to prioritise work, understand impact and iterate quickly
-- Experiment with external data and APIs (e.g. local pollen risk + on-device sensors) to increase the value of physical products
+Own product strategy and roadmap for the Wellbeing domain in Electrolux OneApp, a shared mobile platform across iOS and Android.
 
-Focus areas:
-- Connected air purifiers, ACs and robot vacuums
-- Automation features and data-driven experiences
+- Lead delivery and prioritisation across frontend, backend, firmware, data, UX, legal and cybersecurity stakeholders.
+- Build data-informed connected-product experiences for air purifiers, ACs and robot vacuums.
+- Balance multi-brand and multi-market needs with platform dependencies, device release rhythms and consumer experience quality.
+- Use analytics, customer insight and experimentation to steer product decisions and iteration.
 
-## Digitalisation Manager — Epidemic Sound (2020–2022)
-Led digitalisation initiatives to improve internal workflows through software, automation and new tools.
+## Digitalisation Manager - Epidemic Sound (2020-2022)
 
-Highlights:
-- Worked closely with stakeholders across the organisation to understand needs, prioritise improvements and roll out solutions that scaled with company growth
-- Owned the company’s total software budget and negotiated major vendors
-- Ran projects using OKRs planning on yearly & quarterly basis
-- Acted as Head of Digitalisation during leave cover, focused on scaling the team
+Led digitalisation initiatives that improved internal workflows through software, automation and new tools.
 
-## Senior Consultant / Consultant — Acando & CGI (2016–2020)
-Roles across complex, regulated environments.
+- Partnered with teams across the organisation to map needs, prioritise opportunities and support adoption.
+- Managed the software budget and vendor relationships, connecting tool choices to business value and governance.
+- Planned and executed initiatives through yearly and quarterly OKRs.
+- Covered Head of Digitalisation during leave, with a focus on team continuity and scalable ways of working.
 
-Selected assignments:
-- Product Owner, “Digital Workplace”, Arbetsförmedlingen — led a cross-functional team delivering a modern client platform and digital workspace used by thousands of employees
-- Agile coach, Arbetsförmedlingen
-- Project Manager for software implementations and process development (Arbetsförmedlingen, Ikano Bostad)
-- Service Designer in Healthcare (Stockholm region): visualised patient journeys with doctors/nurses to identify pain points and improvements
-- Advisor, GDPR (Ikano Bostad)
+## Senior Consultant / Consultant - Acando & CGI (2016-2020)
 
-## Earlier
-Business Analyst — ASKO AB (2015)
-- Conducted a major investment analysis for improvements within product transportation (in addition to operational work)
+Worked across complex and regulated environments in product, delivery and service-design roles.
 
-## Education
-Master in Engineering (2010–2016), Lund University (LTH) — Logistics & Production Management / Production economy
+- Product Owner for a Digital Workplace at Arbetsförmedlingen, leading a cross-functional team delivering a modern client platform and workspace used by thousands of employees.
+- Agile coach and project manager for digital services and process development.
+- Service designer in healthcare, mapping patient journeys with clinical teams to identify service improvements.
+- GDPR advisor for a housing organisation.
 
-## Languages
-Swedish (native), English (fluent), Norwegian (working), Spanish (basic)
+## Earlier experience and education
 
-## Certificates
-SAFe Agilist, Scrum, Digital Trust, Graphical Design
+Business Analyst, ASKO AB (2015): investment analysis and operational improvement work.
+
+Master of Science in Engineering, Lund University (LTH), 2010-2016 - Logistics & Production Management / Production Economics.
+
+## Languages and certificates
+
+Swedish (native), English (fluent), Norwegian (working), Spanish (basic). SAFe Agilist, Scrum, Digital Trust and Graphic Design.
