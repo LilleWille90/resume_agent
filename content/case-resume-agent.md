@@ -24,4 +24,4 @@ The product uses a retrieval-grounded conversational portfolio: structured knowl
 
 ## Outcome and learning
 
-Resume Agent is live as a portfolio experiment and a small, concrete example of translating a new capability into a useful workflow: an otherwise static CV becomes a recruiter-friendly product experience. The central learning is that human-curated, structured knowledge plus conversational AI can make familiar information far more discoverable, useful and engaging.
+Resume Agent is live as a portfolio experiment and a small, concrete example of translating a new capability into a useful workflow: an otherwise static CV becomes a recruiter-friendly product experience. Recruiters can reach out to Mattias directly or use Mattias' Resume Agent to ask questions about his experience, projects and working style. The central learning is that human-curated, structured knowledge plus conversational AI can make familiar information far more discoverable, useful and engaging.

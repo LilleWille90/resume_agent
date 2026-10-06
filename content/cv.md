@@ -4,8 +4,6 @@
 
 **Product & Transformation Leader** | Senior Product Manager | Product Lead
 
-**Interactive CV / chat:** mattiaswillner.netlify.app (Ask my CV)
-
 Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - from customer experience and data to platform dependencies, governance and adoption.
 
 ## Core strengths
@@ -42,7 +40,7 @@ Led internal digitalisation through tooling, automation and workflow improvement
 
 **StoryTailor** - Built an end-to-end service turning a spoken story into a printed children's book: transcription, story and character analysis, page structure, prompts, image generation, PDF/layout, payment and Lulu print fulfilment using multiple AI services.
 
-**Resume Agent** - Built a retrieval-grounded conversational CV and portfolio that lets a recruiter interview the CV and explore evidence through natural questions.
+**Resume Agent** - Want to know more? Reach out via LinkedIn, or ask [Mattias' Resume Agent](https://mattiaswillner.netlify.app) - always available to answer questions about his experience, projects and working style.
 
 ## Education & credentials
 
