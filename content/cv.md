@@ -4,11 +4,11 @@
 
 **Contact:** +46 730 490 591 · willner.mattias@gmail.com · Stockholm, Sweden · linkedin.com/in/mattias-willner-904a0465 · [Mattias' Resume Agent](https://mattiaswillner.netlify.app)
 
-Senior product and transformation leader with 10+ years of experience across connected consumer products, digital workplace, internal tooling and complex delivery environments. Combines product strategy and roadmap ownership with practical cross-functional leadership - grounding priorities in customer insight, data and technical constraints.
+Senior product manager with 10+ years of experience across customer-facing mobile and connected products, digital workplace and internal tooling. Combines product strategy and roadmap ownership with practical cross-functional leadership, grounding priorities in customer insight, data and technical constraints.
 
 ## Core strengths
 
-Product Strategy & Roadmaps · Product Leadership · Customer Insight & Problem Framing · Digital Transformation · Internal Tooling & Workflow Design · AI-enabled Product Innovation · Cross-functional Leadership · Data & Experimentation · Governance, Privacy & Security · Vendor & Stakeholder Management
+Product Strategy & Roadmaps · Mobile Products & Technical Delivery · Customer Insight & Problem Framing · Data & Experimentation · Cross-functional Leadership · Governance, Privacy & Security · Commercial & Vendor Management · Internal Tooling & Workflow Design
 
 ## Experience
 
@@ -18,7 +18,7 @@ Own product strategy and roadmap for the Wellbeing domain in Electrolux OneApp, 
 
 - Lead prioritisation and delivery across mobile, backend, data, firmware, UX, legal and cybersecurity.
 - Build connected-product experiences for air purifiers, ACs and robot vacuums, balancing multi-brand, multi-market, platform and device-release needs.
-- Translate customer insight, product data and technical constraints into problem framing, priorities and iteration.
+- Translate customer insight, product data and technical constraints into problem framing, priorities and iterative product delivery.
 - Work in an AI-enabled environment with Microsoft Copilot integrated into daily workflows, gaining practical exposure to adoption, productivity use cases and human + AI ways of working.
 
 ### Digitalisation Manager - Epidemic Sound | 2020-2022
@@ -34,11 +34,11 @@ Led internal digitalisation through tooling, automation and workflow improvement
 - Product Owner, Digital Workplace at Arbetsförmedlingen: led a cross-functional team delivering a modern client platform and workspace used by thousands of employees.
 - Agile coach and project manager for digital services and process development; service designer in healthcare; GDPR advisor for a housing organisation.
 
-## Selected AI & product work
+## Selected product work
 
 **BikeMaster** - Founder and product builder for a native iOS/watchOS connected cycling product. Uses GPS, IMU, sensors, weather and route intelligence; AI-assisted development accelerates delivery while core ride logic remains deterministic.
 
-**StoryTailor** - Built an end-to-end service turning a spoken story into a printed children's book: transcription, story and character analysis, page structure, prompts, image generation, PDF/layout, payment and Lulu print fulfilment using multiple AI services.
+**StoryTailor** - Built an end-to-end service turning a spoken story into a printed children's book: transcription, story and character analysis, page structure, prompts, image generation, PDF/layout, payment and Lulu print fulfilment.
 
 **Resume Agent** - Want to know more? Reach out directly to me, or ask Mattias' Resume Agent - always available to answer questions about my experience, projects and working style.
 
