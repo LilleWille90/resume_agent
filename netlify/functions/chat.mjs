@@ -29,9 +29,11 @@ function scoreChunk(query, chunk) {
 
 function isNamedProjectQuery(query, doc) {
   const normalise = value => value.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const queryKey = normalise(query);
+  const queryKey = normalise(query)
+    .replaceAll("bikerbrain", "bikemaster")
+    .replaceAll("hiphopatlas", "wavemap");
   const docKey = normalise(doc);
-  const projects = ["storytailor", "bikemaster", "resumeagent"];
+  const projects = ["storytailor", "bikemaster", "songatlas", "wavemap", "resumeagent"];
   return projects.some(project => queryKey.includes(project) && docKey.includes(project));
 }
 

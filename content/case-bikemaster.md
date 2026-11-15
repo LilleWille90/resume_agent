@@ -1,26 +1,35 @@
-# Case: BikeMaster - AI-assisted connected cycling intelligence
+# Case: BikerBrain - local-first cycling intelligence for iPhone
+
+BikerBrain is the current name; BikeMaster (Bikemaster) is the earlier project name.
+Status: active beta (version 1.2) for iPhone. A project walkthrough is available on request. A clickable design prototype also exists.
 
 ## Problem
 
-Cycling apps often record a lot of data but offer limited help turning repeated rides into understandable, actionable feedback. BikeMaster explores how GPS, IMU and sensor signals, weather and route intelligence can become a connected experience that helps riders understand their rides.
+Cycling apps record a lot of data but give limited help turning rides into understandable feedback, and estimates such as power are often presented as more precise than they are. BikerBrain explores how GPS, barometer and motion data, Bluetooth sensors, weather and route intelligence can become trustworthy ride insights, including estimated power, without requiring a power meter, an account or a subscription.
 
 ## Mattias' role
 
-Founder and product builder. Mattias shapes the product concept, interaction model, technical direction and validation approach while rapidly building the iPhone and Apple Watch experience.
+Founder and product builder. Mattias leads the product concept, interaction model, technical direction and validation approach, and builds the app hands-on with AI coding agents: sensor integration, diagnostics, ride analysis and comparison with recordings from other cycling systems.
 
 ## How AI is used
 
-AI is part of how the product gets built: AI coding agents and AI-assisted design, implementation, testing and documentation shorten the loop from product idea to working iOS/watchOS feature. BikeMaster also explores an optional explanation layer that can turn curated ride insights into useful, human-readable answers. The core power and ride calculations remain deterministic; the AI exploration is about explanation and insight, not misrepresenting the underlying model.
+AI is how the product gets built: AI coding agents support implementation, debugging, testing and documentation, and independent AI reviews are used to challenge findings. The app's core calculations are deliberately not AI: power and ride calculations are deterministic and testable. Any future AI explanation layer would receive minimal, curated facts rather than raw telemetry.
 
-## Technical approach
+## Product decisions
 
-- Native SwiftUI app with iPhone and Apple Watch components
-- Local-first ride recording, GPS, IMU and sensor support, weather inputs, route recognition and derived insights
-- Deterministic calculations and bounded data models for core ride behaviour, combined with exploration of AI-based explanations
-- AI-assisted coding, design, testing and documentation as a product-development workflow
-- Explicit consent, minimal data sharing and a separate AI boundary for any future online explanation feature
-- Automated tests and documented architecture/decision records to protect reliability as the product evolves
+- Keep the measurement core understandable and testable, and separate calculated signals from explanatory features.
+- Local first: "Ride locally. Learn locally. Sync what is valuable. Upload only what is necessary." Recording, sensors and analysis work without a network connection.
+- Power is presented as an estimate. Heart rate never influences the power estimate, and a real power meter is used only as an independent reference to validate the model.
+
+## Technical detail
+
+- Platform: native iPhone app in Swift and SwiftUI, with Combine, Swift Charts, MapKit and ActivityKit (Live Activity on the Lock Screen). Layered architecture: SwiftUI features, platform services, and a pure deterministic domain layer with no UI, Bluetooth, storage or network dependencies.
+- Sensors: Core Bluetooth with standard Bluetooth LE GATT profiles: Cycling Speed and Cadence (service 0x1816), Heart Rate (0x180D) and Device Information (0x180A). A Cycling Power meter (0x1818) is read only as a reference and never feeds the estimate. Core Location provides GPS and Core Motion provides barometric altitude and motion data. Guided onboarding helps riders mount, pair and verify speed and cadence sensors.
+- Power model: a deterministic physics model of gravity (climbing), rolling resistance, aerodynamic drag and acceleration, using rider and bike mass from versioned bike profiles. The model is under a "model freeze": changes require evidence from replayed real rides and regression tests.
+- Weather and routes: Apple WeatherKit, with MET Norway's Locationforecast API as an alternative provider, supplies temperature and pressure for air density; wind is evaluated separately. GPX import, on-device route recognition, learned route segments and same-route comparisons; optional elevation data from MapTiler.
+- Data and export: a versioned CSV export contract with JSONL diagnostic sidecars, and a native FIT file encoder. Ride data stays on the phone by default, using iOS Data Protection, with credentials in the Keychain. Prepared but not switched on: Strava upload through a server-side OAuth gateway (tokens never stored on the phone), and a Supabase account layer with Sign in with Apple as a future sync boundary.
+- Quality: about 600 automated tests (Swift Testing and XCTest) and 48 architecture decision records (ADRs). Power estimates are compared with power-meter recordings through reproducible ride replays and agreement reports.
 
 ## Outcome and learning
 
-BikeMaster is an active beta project and an example of the leverage available to a solo product builder: modern APIs and AI-assisted workflows make it possible to create a sophisticated connected-product experience that would previously have been harder to take beyond an idea. The key learning is to pair rapid experimentation with reliable foundations: AI explanations are most useful when grounded in curated, comprehensible facts, with privacy boundaries kept appropriate to the product.
+BikerBrain is an active beta project and an example of what a solo product builder can do with AI-assisted development. The key learning: getting a feature to run is only the beginning. Physical sensors, noisy data and real rides expose assumptions that a convincing prototype can hide, so rapid experimentation must be paired with reliable, testable foundations.

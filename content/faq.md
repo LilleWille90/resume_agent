@@ -16,7 +16,7 @@ I use funnels, cohorts and usage analytics to prioritise, measure impact, and it
 Social, open-minded, enthusiastic people person; solution-oriented with a creative edge.
 
 ## What’s your AI experience?
-I actively build with models, APIs and agentic tools to understand how new capabilities can change products and workflows. That hands-on work sits alongside my transformation background: I’m most interested in translating AI capabilities into usable product experiences, not technology for its own sake. (For examples, see BikeMaster, StoryTailor and Resume Agent.)
+I actively build with models, APIs and agentic tools to understand how new capabilities can change products and workflows. That hands-on work sits alongside my transformation background: I’m most interested in translating AI capabilities into usable product experiences, not technology for its own sake. (For examples, see SongAtlas, BikerBrain, Wavemap, StoryTailor and Resume Agent.)
 
 ## What do you want to be asked in an interview?
 - “Walk me through a product decision you changed your mind on and why.”
