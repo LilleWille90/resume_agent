@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <a class="skip" href="#songatlas">Skip to the work</a>
+    <a class="skip" href="#bikerbrain">Skip to the work</a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#songatlas">Work</a><a href="#ask">Ask my agent</a><a href="#background">Background</a><a class="nav-cv" href="/Mattias-CV.pdf" target="_blank" rel="noreferrer">CV</a>
+      <a href="#bikerbrain">Work</a><a href="#ask">Ask my agent</a><a href="#background">Background</a><a class="nav-cv" href="/Mattias-CV.pdf" target="_blank" rel="noreferrer">CV</a>
     </nav>
 
     <header class="hero">
@@ -23,7 +23,7 @@
         <p class="lead">Product leader who builds with AI.</p>
         <p class="hero-note">Ten years leading connected products and digitalisation at Electrolux, Epidemic Sound and Arbetsförmedlingen. On the side, four products of my own, all built with AI and all real.</p>
         <div class="actions">
-          <a class="button primary" href="#songatlas">See the work</a>
+          <a class="button primary" href="#bikerbrain">See the work</a>
           <a class="button" href="#ask">Ask my agent</a>
         </div>
       </div>
@@ -48,6 +48,33 @@
     </header>
 
     <main>
+      <section class="band band-bikerbrain" id="bikerbrain" aria-labelledby="bikerbrain-title">
+        <div class="band-copy band-copy-wide" data-reveal>
+          <h2 id="bikerbrain-title">BikerBrain</h2>
+          <p class="lead">Cycling data that has to earn your trust.</p>
+          <p>A connected cycling app exploring how GPS, sensors, weather and route signals can become useful ride insights, including estimated power and activity analysis.</p>
+          <p class="meta">Beta 1.2 for iPhone, in active development · walkthrough on request</p>
+        </div>
+        <div class="phones" data-reveal>
+          <figure class="phone phone-side"><img src="/assets/bikerbrain-welcome.png" alt="BikerBrain welcome screen" width="1320" height="2868" loading="lazy"><figcaption>Welcome</figcaption></figure>
+          <figure class="phone phone-main"><video class="clip " data-src="/assets/media/bikerbrain.mp4" poster="/assets/media/bikerbrain.jpg" width="480" height="1022" muted loop playsinline preload="none" aria-label="BikerBrain: starting a simulated ride, live estimated power and cadence, ending the ride and opening its summary and history"></video><figcaption>A simulated ride, from start to summary.</figcaption></figure>
+          <figure class="phone phone-side"><img src="/assets/bikerbrain-sensors.png" alt="BikerBrain choosing cycling sensors" width="1320" height="2868" loading="lazy"><figcaption>Choosing sensors</figcaption></figure>
+        </div>
+        
+    <div class="detail" data-reveal>
+      <div class="detail-col">
+        <h3>Behind the project</h3>
+        <dl class="facts"><div><dt>My contribution</dt><dd>I lead the product concept and hands-on development, working through the cycling experience, sensor integration, diagnostics and validation with AI tools.</dd></div><div><dt>How AI fits</dt><dd>Coding agents support implementation, debugging, testing and documentation. Estimated cycling power is a model output that needs validation; using AI to build the app does not make its measurements accurate by default.</dd></div><div><dt>A product decision</dt><dd>Keep the measurement core understandable and testable. Compare ride recordings and sensor data, investigate discrepancies, and separate calculated signals from explanatory features.</dd></div><div><dt>What I’m learning</dt><dd>Getting a feature to run is only the beginning. Physical sensors, noisy data and real rides expose assumptions that a convincing prototype can hide.</dd></div></dl>
+      </div>
+      <div class="detail-col">
+        <h3>Technical detail</h3>
+        <p class="tech-lede">A native, local-first iPhone app. Recording, sensor input, power estimation and post-ride analysis run on the device and keep working without a connection.</p>
+        <ol class="flow" aria-label="How it works, step by step"><li>GPS, barometer and BLE sensors</li><li>Select speed, gradient and acceleration</li><li>Physics-based power estimate</li><li>Route and weather context</li><li>Local history and analysis</li><li>CSV and FIT export</li></ol>
+        <dl class="facts facts-2"><div><dt>Platform</dt><dd>Swift and SwiftUI with Combine, Swift Charts, MapKit and ActivityKit (Live Activity on the Lock Screen). Layered architecture: SwiftUI features → platform services → a pure, deterministic domain layer with no UI, Bluetooth or network dependencies.</dd></div><div><dt>Sensors</dt><dd>Core Bluetooth with standard BLE GATT profiles: Cycling Speed and Cadence (0x1816), Heart Rate (0x180D) and Device Information. A Cycling Power meter (0x1818) is read only as an independent reference and never feeds the estimate. Core Location for GPS and Core Motion for barometric altitude.</dd></div><div><dt>Power model</dt><dd>A deterministic physics model of gravity, rolling resistance, aerodynamic drag and acceleration, using rider and bike mass from a versioned bike profile. Heart rate never influences power. The model is under a “model freeze”: changes need evidence from replayed real rides and regression tests.</dd></div><div><dt>Weather and routes</dt><dd>Apple WeatherKit, with MET Norway’s Locationforecast API as an alternative provider, supplies temperature and pressure for air density; wind is evaluated separately. GPX import, on-device route recognition and learned segments, with optional elevation data from MapTiler.</dd></div><div><dt>Data and export</dt><dd>A versioned CSV contract with JSONL sidecars for diagnostics, plus a native FIT encoder. Ride data stays on the phone by default, protected by iOS Data Protection, with credentials in the Keychain. Prepared but not switched on: Strava upload through a server-side OAuth gateway, and a Supabase account layer with Sign in with Apple.</dd></div><div><dt>Quality</dt><dd>About 600 automated tests (Swift Testing and XCTest) and 48 architecture decision records. Estimates are compared with power-meter recordings through reproducible ride replays and agreement reports.</dd></div></dl>
+      </div>
+    </div>
+      </section>
+
       <section class="band band-songatlas" id="songatlas" aria-labelledby="songatlas-title">
         <div class="split">
           <div class="band-copy" data-reveal>
@@ -73,33 +100,6 @@
         <p class="tech-lede">A Cloudflare-hosted web app that rebuilds each country’s top 10 every week from licensed chart data, then matches every recording to Apple Music for artwork and previews.</p>
         <ol class="flow" aria-label="How it works, step by step"><li>Fetch national charts via Soundcharts</li><li>Join charts on recording IDs</li><li>Score with equal weight</li><li>Cache weekly in Cloudflare D1</li><li>Match ISRC in Apple Music</li><li>Preview, like and export</li></ol>
         <dl class="facts facts-2"><div><dt>Front end</dt><dd>React and TypeScript on Vinext, a Vite-based implementation of the Next.js API. An orthographic D3 globe with a small WebGL renderer for the landscape view. Natural Earth relief textures are bundled (under 1&nbsp;MB), so there are no map-vendor keys or per-view map calls.</dd></div><div><dt>Chart data</dt><dd>The Soundcharts API is the single ranking source: Spotify and Apple Music national daily charts, plus QQ Music (China), Melon (South Korea) and JioSaavn (India) where they lead the market. Charts are combined with equal weight through Soundcharts recording UUIDs; a country with only one chart is shown without aggregation.</dd></div><div><dt>Media matching</dt><dd>Apple Music catalogue lookup by exact ISRC in the right storefront, with no fuzzy title search. 30-second previews stream from Apple and no audio is stored. Without an exact match the track gets a placeholder rather than a guess.</dd></div><div><dt>Playlist export</dt><dd>Apple Music through MusicKit JS and a short-lived developer token signed on the server, so the private key never reaches the browser. Playlists are private, de-duplicated and only ever added to. Spotify and YouTube Music export use links resolved through Soundcharts and need no sign-in.</dd></div><div><dt>Storage and caching</dt><dd>Cloudflare D1 (SQLite) with Drizzle ORM. A shared weekly cache refreshes on the first visit after Friday 18:00 CET, saved chart snapshots drive “biggest climber”, and ISRC matches are cached for 30 days. Liked tracks stay in the browser (up to 100).</dd></div><div><dt>Privacy and cost control</dt><dd>No cookies or tracking; usage is counted as anonymous daily totals per country. Calls to the data provider run under a hard budget and metadata is fetched in small batches for visible tracks only. Retired sources (direct Apple charts, Deezer, Spotify scraping) are switched off at the API.</dd></div></dl>
-      </div>
-    </div>
-      </section>
-
-      <section class="band band-bikerbrain" id="bikerbrain" aria-labelledby="bikerbrain-title">
-        <div class="band-copy band-copy-wide" data-reveal>
-          <h2 id="bikerbrain-title">BikerBrain</h2>
-          <p class="lead">Cycling data that has to earn your trust.</p>
-          <p>A connected cycling app exploring how GPS, sensors, weather and route signals can become useful ride insights, including estimated power and activity analysis.</p>
-          <p class="meta">Beta 1.2 for iPhone, in active development · walkthrough on request</p>
-        </div>
-        <div class="phones" data-reveal>
-          <figure class="phone phone-side"><img src="/assets/bikerbrain-welcome.png" alt="BikerBrain welcome screen" width="1320" height="2868" loading="lazy"><figcaption>Welcome</figcaption></figure>
-          <figure class="phone phone-main"><video class="clip " data-src="/assets/media/bikerbrain.mp4" poster="/assets/media/bikerbrain.jpg" width="480" height="1022" muted loop playsinline preload="none" aria-label="BikerBrain: starting a simulated ride, live estimated power and cadence, ending the ride and opening its summary and history"></video><figcaption>A simulated ride, from start to summary.</figcaption></figure>
-          <figure class="phone phone-side"><img src="/assets/bikerbrain-sensors.png" alt="BikerBrain choosing cycling sensors" width="1320" height="2868" loading="lazy"><figcaption>Choosing sensors</figcaption></figure>
-        </div>
-        
-    <div class="detail" data-reveal>
-      <div class="detail-col">
-        <h3>Behind the project</h3>
-        <dl class="facts"><div><dt>My contribution</dt><dd>I lead the product concept and hands-on development, working through the cycling experience, sensor integration, diagnostics and validation with AI tools.</dd></div><div><dt>How AI fits</dt><dd>Coding agents support implementation, debugging, testing and documentation. Estimated cycling power is a model output that needs validation; using AI to build the app does not make its measurements accurate by default.</dd></div><div><dt>A product decision</dt><dd>Keep the measurement core understandable and testable. Compare ride recordings and sensor data, investigate discrepancies, and separate calculated signals from explanatory features.</dd></div><div><dt>What I’m learning</dt><dd>Getting a feature to run is only the beginning. Physical sensors, noisy data and real rides expose assumptions that a convincing prototype can hide.</dd></div></dl>
-      </div>
-      <div class="detail-col">
-        <h3>Technical detail</h3>
-        <p class="tech-lede">A native, local-first iPhone app. Recording, sensor input, power estimation and post-ride analysis run on the device and keep working without a connection.</p>
-        <ol class="flow" aria-label="How it works, step by step"><li>GPS, barometer and BLE sensors</li><li>Select speed, gradient and acceleration</li><li>Physics-based power estimate</li><li>Route and weather context</li><li>Local history and analysis</li><li>CSV and FIT export</li></ol>
-        <dl class="facts facts-2"><div><dt>Platform</dt><dd>Swift and SwiftUI with Combine, Swift Charts, MapKit and ActivityKit (Live Activity on the Lock Screen). Layered architecture: SwiftUI features → platform services → a pure, deterministic domain layer with no UI, Bluetooth or network dependencies.</dd></div><div><dt>Sensors</dt><dd>Core Bluetooth with standard BLE GATT profiles: Cycling Speed and Cadence (0x1816), Heart Rate (0x180D) and Device Information. A Cycling Power meter (0x1818) is read only as an independent reference and never feeds the estimate. Core Location for GPS and Core Motion for barometric altitude.</dd></div><div><dt>Power model</dt><dd>A deterministic physics model of gravity, rolling resistance, aerodynamic drag and acceleration, using rider and bike mass from a versioned bike profile. Heart rate never influences power. The model is under a “model freeze”: changes need evidence from replayed real rides and regression tests.</dd></div><div><dt>Weather and routes</dt><dd>Apple WeatherKit, with MET Norway’s Locationforecast API as an alternative provider, supplies temperature and pressure for air density; wind is evaluated separately. GPX import, on-device route recognition and learned segments, with optional elevation data from MapTiler.</dd></div><div><dt>Data and export</dt><dd>A versioned CSV contract with JSONL sidecars for diagnostics, plus a native FIT encoder. Ride data stays on the phone by default, protected by iOS Data Protection, with credentials in the Keychain. Prepared but not switched on: Strava upload through a server-side OAuth gateway, and a Supabase account layer with Sign in with Apple.</dd></div><div><dt>Quality</dt><dd>About 600 automated tests (Swift Testing and XCTest) and 48 architecture decision records. Estimates are compared with power-meter recordings through reproducible ride replays and agreement reports.</dd></div></dl>
       </div>
     </div>
       </section>

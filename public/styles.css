@@ -198,12 +198,13 @@ p { margin: 0; }
 .flow li { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; }
 .flow li + li::before { content: "→"; margin-left: -10px; margin-right: 4px; opacity: 0.7; }
 
-/* SongAtlas: dark globe band, coral accent */
-.band-songatlas { background: #111214; color: #f2f2f0; }
+/* SongAtlas: a light paper band, like the app's own chart panel; the globe clip is the dark window */
+.band-songatlas { background: #fbfbfb; color: #161816; }
 .band-songatlas .button.primary { background: #f07a5f; color: #1a0f0b; }
-.band-songatlas .button.primary:hover { background: #f59a84; }
-.band-songatlas .meta, .band-songatlas figcaption, .band-songatlas .facts dt { color: #f39b86; }
-.band-songatlas .flow li { background: #24262b; }
+.band-songatlas .button.primary:hover { background: #f5927b; }
+.band-songatlas .meta, .band-songatlas figcaption, .band-songatlas .facts dt { color: #a8402a; }
+.band-songatlas .flow li { background: #ecebe8; }
+.band-songatlas .media-wide .clip { background: #111214; }
 
 /* BikerBrain: the app's own dark purple */
 .band-bikerbrain { background: #1b1526; color: #f4f1fa; }
