@@ -32,6 +32,13 @@ AI is how the product gets built: AI coding agents support implementation, debug
 - Data and export: a versioned CSV export contract with JSONL diagnostic sidecars, and a native FIT file encoder. Ride data stays on the phone by default, using iOS Data Protection, with credentials in the Keychain. Prepared but not switched on: Strava upload through a server-side OAuth gateway (tokens never stored on the phone), and a Supabase account layer with Sign in with Apple as a future sync boundary.
 - Quality: about 600 automated tests (Swift Testing and XCTest) and 48 architecture decision records (ADRs). Power estimates are compared with power-meter recordings through reproducible ride replays and agreement reports.
 
+
+## Go-to-market prototype
+
+Sales page prototype: https://bikemaster.lovable.app/store
+
+Mattias built a sales page prototype in Lovable to test how BikerBrain could be positioned and sold. It presents BikerBrain as "power training without a power meter": estimated power that always shows its confidence, route intelligence that learns recurring red lights, climbs and weather, and a comparison with buying a dedicated power meter. It sketches a free GPS-only tier and a Plus subscription (about $5 per month) for full route intelligence, and recommends ride-tested CYCPLUS speed, cadence, heart-rate and radar sensors. It is a prototype for exploring positioning and pricing; the app itself is in beta and not yet on sale.
+
 ## Outcome and learning
 
 BikerBrain is an active beta project and an example of what a solo product builder can do with AI-assisted development. The key learning: getting a feature to run is only the beginning. Physical sensors, noisy data and real rides expose assumptions that a convincing prototype can hide, so rapid experimentation must be paired with reliable, testable foundations.
