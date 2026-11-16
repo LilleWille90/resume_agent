@@ -431,3 +431,8 @@ p { margin: 0; }
   .tile-storytailor .tile-page:first-child { display: none; }
   .tile-book { grid-template-columns: 1fr; }
 }
+
+/* BikerBrain action in the app's own purple */
+.band-bikerbrain .button.primary { background: #b58cff; color: #1a1028; }
+.band-bikerbrain .button.primary:hover { background: #c7a6ff; }
+.band-copy-wide { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
