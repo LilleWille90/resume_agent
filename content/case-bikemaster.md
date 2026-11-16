@@ -37,7 +37,7 @@ AI is how the product gets built: AI coding agents support implementation, debug
 
 Sales page prototype: https://bikemaster.lovable.app/store
 
-Mattias built a sales page prototype in Lovable to test how BikerBrain could be positioned and sold. It presents BikerBrain as "power training without a power meter": estimated power that always shows its confidence, route intelligence that learns recurring red lights, climbs and weather, and a comparison with buying a dedicated power meter. It sketches a free GPS-only tier and a Plus subscription (about $5 per month) for full route intelligence, and recommends ride-tested CYCPLUS speed, cadence, heart-rate and radar sensors. It is a prototype for exploring positioning and pricing; the app itself is in beta and not yet on sale.
+Mattias built a sales page prototype in Lovable to test how BikerBrain could be positioned and sold. It presents BikerBrain as "power training without a power meter": estimated power that always shows its confidence, route intelligence that learns recurring red lights, climbs and weather, and a comparison with buying a dedicated power meter. It sketches a free GPS-only tier and a Plus subscription (about $5 per month) for full route intelligence, and recommends ride-tested CYCPLUS speed, cadence, heart-rate and radar sensors. It is a prototype for exploring positioning and pricing; the app itself is in beta and not yet on sale. The CYCPLUS partnership and the BIKERBRAIN20 discount code shown on that page are hypothetical, part of the go-to-market exploration; there is no agreement with CYCPLUS. The CYCPLUS sensors themselves have genuinely been ride-tested with the app.
 
 ## Outcome and learning
 
