@@ -1,7 +1,7 @@
 # Case: BikerBrain - local-first cycling intelligence for iPhone
 
 BikerBrain is the current name; BikeMaster (Bikemaster) is the earlier project name.
-Status: active beta (version 1.2) for iPhone. A project walkthrough is available on request. A clickable design prototype also exists.
+Status: active beta (version 1.2) for iPhone, with Live Activity support; an earlier version also had a working Apple Watch companion. A project walkthrough is available on request. A clickable design prototype also exists.
 
 ## Problem
 
@@ -24,7 +24,9 @@ AI is how the product gets built: AI coding agents support implementation, debug
 ## Technical detail
 
 - Platform: native iPhone app in Swift and SwiftUI, with Combine, Swift Charts, MapKit and ActivityKit (Live Activity on the Lock Screen). Layered architecture: SwiftUI features, platform services, and a pure deterministic domain layer with no UI, Bluetooth, storage or network dependencies.
-- Sensors: Core Bluetooth with standard Bluetooth LE GATT profiles: Cycling Speed and Cadence (service 0x1816), Heart Rate (0x180D) and Device Information (0x180A). A Cycling Power meter (0x1818) is read only as a reference and never feeds the estimate. Core Location provides GPS and Core Motion provides barometric altitude and motion data. Guided onboarding helps riders mount, pair and verify speed and cadence sensors.
+- Sensors: Core Bluetooth with standard Bluetooth LE profiles: speed and cadence (Cycling Speed and Cadence, service 0x1816), heart rate (0x180D) and a rear radar light that detects vehicles approaching from behind. Heart rate can also come from AirPods Pro 3 through HealthKit. A Cycling Power meter (0x1818) is read only as an independent reference and never feeds the estimate. Core Location provides GPS and Core Motion provides barometric altitude and motion data. Guided onboarding helps riders mount, pair and verify speed and cadence sensors.
+- Real sensors, many brands: BikerBrain has been field-tested with sensors from several manufacturers, not only in the simulator. Speed and cadence sensors from four different brands have been tested and all work. CYCPLUS hardware has been tested across the board: the CYCPLUS L7 radar light, the CYCPLUS H1 heart-rate strap and CYCPLUS speed and cadence sensors.
+- Live Activity and Apple Watch: a Live Activity (ActivityKit) keeps the current ride on the iPhone Lock Screen while the phone is locked. An earlier version had a working Apple Watch companion that ran the workout and mirrored live heart rate to the phone; beta 1.2 focuses on the iPhone app.
 - Power model: a deterministic physics model of gravity (climbing), rolling resistance, aerodynamic drag and acceleration, using rider and bike mass from versioned bike profiles. The model is under a "model freeze": changes require evidence from replayed real rides and regression tests.
 - Weather and routes: Apple WeatherKit, with MET Norway's Locationforecast API as an alternative provider, supplies temperature and pressure for air density; wind is evaluated separately. GPX import, on-device route recognition, learned route segments and same-route comparisons; optional elevation data from MapTiler.
 - Data and export: a versioned CSV export contract with JSONL diagnostic sidecars, and a native FIT file encoder. Ride data stays on the phone by default, using iOS Data Protection, with credentials in the Keychain. Prepared but not switched on: Strava upload through a server-side OAuth gateway (tokens never stored on the phone), and a Supabase account layer with Sign in with Apple as a future sync boundary.
