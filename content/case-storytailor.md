@@ -1,6 +1,9 @@
 # Case: StoryTailor - AI-assisted personal children's books
 
-Status: independent service project; a working end-to-end path from recorded story to print order. A project walkthrough is available on request.
+Status: independent service project; a working end-to-end path from recorded story to print order.
+Interactive demo: https://storytailor-mw.netlify.app
+
+The public demo runs the real StoryTailor app in a demo mode: it uses sample data (a world called Fox Hill with Ollie the fox, Grandpa Owl and Pip the hedgehog, two stories and a finished illustrated book) and prepared answers instead of calling Supabase, OpenAI, Claude, Replicate, Stripe or Lulu, so it costs nothing to run. Visitors can record or write a story, see characters extracted and the story matched to its world, split a story into pages, generate illustrations, choose layouts and download a print-ready PDF. Reading aloud and ordering are turned off in the demo.
 
 ## Problem
 
