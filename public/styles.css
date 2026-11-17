@@ -236,6 +236,10 @@ p { margin: 0; }
 .band-storytailor { background: #e3e2db; color: #1b1f1a; }
 .band-storytailor .meta, .band-storytailor figcaption, .band-storytailor .facts dt { color: #2d5a27; }
 .band-storytailor .flow li { background: #d3d3ca; }
+.band-wasteland { background: #22160f; color: #f6ede2; }
+.band-wasteland .meta, .band-wasteland figcaption, .band-wasteland .facts dt { color: #e9bd84; }
+.band-wasteland .flow li { background: #35241a; }
+.band-wasteland .media-wide .clip { background: #120b07; }
 .book {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -31,9 +31,10 @@ function isNamedProjectQuery(query, doc) {
   const normalise = value => value.toLowerCase().replace(/[^a-z0-9]/g, "");
   const queryKey = normalise(query)
     .replaceAll("bikerbrain", "bikemaster")
-    .replaceAll("hiphopatlas", "wavemap");
+    .replaceAll("hiphopatlas", "wavemap")
+    .replaceAll("wastelandracer", "wasteland");
   const docKey = normalise(doc);
-  const projects = ["storytailor", "bikemaster", "songatlas", "wavemap", "resumeagent"];
+  const projects = ["storytailor", "bikemaster", "songatlas", "wavemap", "wasteland", "resumeagent"];
   return projects.some(project => queryKey.includes(project) && docKey.includes(project));
 }
 
