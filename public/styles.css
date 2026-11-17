@@ -449,7 +449,7 @@ p { margin: 0; }
 .tile-wasteland img { object-position: 50% 45%; }
 .mosaic { height: min(80vh, 760px); }
 .tile-bikerbrain { grid-column: 2; grid-row: 1 / span 4; }
-.tile-storytailor { display: flex; grid-column: 1; grid-row: 5 / span 2; background: #fde3c7; color: #2a1d10; }
+.tile-storytailor { display: flex; grid-column: 1; grid-row: 5 / span 2; background: var(--ground-2); color: var(--ink); }
 .tile .tile-storytailor img, .tile-storytailor img { object-fit: contain; padding-top: 10px; }
 .tile-book { position: absolute; inset: 14px 14px 46px; display: grid; grid-template-columns: 1fr 1fr; padding: 5px 5px 7px; background: #2d5a27; border-radius: 4px; }
 .tile-page { display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8% 9%; font-family: var(--serif); font-size: var(--t-small); line-height: 1.35; color: #2b2722; background: linear-gradient(90deg, #fbf6ea 0 85%, #e6dcc6 100%); border-radius: 2px 0 0 2px; overflow: hidden; }
