@@ -444,3 +444,13 @@ p { margin: 0; }
 /* Storytailor action in the app's own forest green */
 .band-storytailor .button.primary { background: #2d5a27; color: #ffffff; }
 .band-storytailor .button.primary:hover { background: #23481f; }
+
+/* Desktop clip with the phone version alongside */
+.duo { position: relative; padding-bottom: clamp(48px, 7vw, 96px); }
+.mini-phone { position: absolute; right: clamp(-12px, -1vw, 0px); bottom: 0; width: clamp(108px, 19%, 220px); }
+.mini-phone .clip { display: block; border-radius: clamp(16px, 2.2vw, 30px); border: clamp(4px, 0.5vw, 7px) solid #0b0b0c; background: #0b0b0c; }
+.media-bleed .mini-phone { right: var(--margin); width: clamp(108px, 14%, 220px); }
+.media-bleed .duo { padding-bottom: clamp(64px, 9vw, 140px); }
+@media (max-width: 720px) {
+  .mini-phone, .media-bleed .mini-phone { width: 30%; right: 4%; }
+}

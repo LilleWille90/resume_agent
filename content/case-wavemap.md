@@ -35,3 +35,6 @@ AI is part of the building and design workflow (Lovable, AI coding agents) and o
 ## Outcome and learning
 
 A rich visual world needs clear interactions. The challenge is balancing atmosphere, readable information and navigation that makes sense, while keeping historical claims sourced and fair.
+
+## On the phone
+Wavemap also works in the phone browser. The portfolio shows a phone recording: choosing rock on the Wavemap front page, following the British Invasion story chapter by chapter (the Beatles on the Ed Sullivan Show in 1964, Hamburg in 1960, Brian Epstein at the Cavern Club in 1961), then the rock map in 2026.

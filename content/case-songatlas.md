@@ -34,3 +34,6 @@ AI supported implementation and iteration (AI coding agents). The music experien
 ## Outcome and learning
 
 SongAtlas is live. A playful starting point led to real product questions: data freshness, matching recordings across services, API budgets and licensing, and what to show when a source is unavailable.
+
+## On the phone
+SongAtlas also works as a mobile web app in the phone browser: the same globe, country top 10s and previews, liked tracks saved in the browser, and export of liked tracks to a "Song Atlas discoveries" playlist in Apple Music, or to Spotify and YouTube Music. A phone recording of this is on the portfolio.
