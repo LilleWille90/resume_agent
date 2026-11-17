@@ -33,7 +33,7 @@ Led internal digitalisation through tooling, automation and workflow improvement
 
 - Product Owner, Digital Workplace at Arbetsförmedlingen: led a cross-functional team delivering a modern client platform and workspace used by thousands of employees.
 - Agile coach and project manager for digital services and process development; service designer in healthcare.
-- Ikano Bostad (housing company), about two years: digitalisation and GDPR advisory.
+- Ikano Bostad (housing company), 2016-2018: digitalisation and GDPR advisory.
 
 ## Selected product work
 

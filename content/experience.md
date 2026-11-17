@@ -26,7 +26,7 @@ Worked across complex and regulated environments in product, delivery and servic
 - Product Owner for a Digital Workplace at Arbetsförmedlingen, leading a cross-functional team delivering a modern client platform and workspace used by thousands of employees.
 - Agile coach and project manager for digital services and process development.
 - Service designer in healthcare, mapping patient journeys with clinical teams to identify service improvements.
-- Ikano Bostad (housing company), about two years: digitalisation and GDPR advisory.
+- Ikano Bostad (housing company), 2016-2018: digitalisation and GDPR advisory.
 
 ## Earlier experience and education
 
