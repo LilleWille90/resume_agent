@@ -131,6 +131,34 @@
     </div>
       </section>
 
+      <section class="band band-wasteland" id="wasteland" aria-labelledby="wasteland-title">
+        <div class="split">
+          <div class="band-copy" data-reveal>
+            <h2 id="wasteland-title">Wasteland Racer</h2>
+            <p class="lead">Get the oil through.</p>
+            <p>A 3D driving game for the desktop. You drive an oil tanker 3.7 kilometres through a red desert wasteland, along a canyon rim and over a bridge, while rocket turrets and raiders try to stop the delivery. My first game, made in Godot with AI as the programmer.</p>
+            <p class="meta">Desktop game in Godot · playable build on request</p>
+          </div>
+          <figure class="media media-wide" data-reveal>
+            <video class="clip " data-src="/assets/media/wasteland.mp4" poster="/assets/media/wasteland.jpg" width="1280" height="778" muted loop playsinline preload="none" aria-label="Wasteland Racer: an oil tanker driving through a red desert, crossing a bridge, dodging rockets in a canyon and reaching the delivery screen"></video>
+            <figcaption>One run, from the oil field to delivery.</figcaption>
+          </figure>
+        </div>
+        
+    <div class="detail" data-reveal>
+      <div class="detail-col">
+        <h3>Behind the project</h3>
+        <dl class="facts"><div><dt>My contribution</dt><dd>I came up with the game, decided what it should feel like and what to cut, and playtested every version. The code was written by AI in Godot from my descriptions and my feedback after each drive.</dd></div><div><dt>How AI fits</dt><dd>AI writes the GDScript, explains the engine and fixes bugs from my notes. The 3D models were generated with Meshy’s text-to-3D tool; the music and sound effects I prepared myself.</dd></div><div><dt>A product decision</dt><dd>Damage slows the tanker down but never stops it. Every run can still be finished, so the challenge is how well you drive, not whether you can get to the end.</dd></div><div><dt>What I’m learning</dt><dd>Game feel only shows up when you play. Small things, like the camera angle, a warning before a rocket lands or a short radio line, matter more than another feature.</dd></div></dl>
+      </div>
+      <div class="detail-col">
+        <h3>Technical detail</h3>
+        <p class="tech-lede">A single-player desktop game in Godot 4 with Jolt physics. The level is a point-to-point route rather than a lap track, with scripted encounters along the way.</p>
+        <ol class="flow" aria-label="How it works, step by step"><li>Drive the tanker with the keyboard</li><li>Aim and fire with the mouse</li><li>Dodge marked rocket impacts</li><li>Radio lines from the convoy</li><li>Results screen at delivery</li></ol>
+        <dl class="facts facts-2"><div><dt>Engine</dt><dd>Godot 4 with the Forward+ renderer and Jolt Physics, scripted in GDScript. Runs on macOS and can be exported to Windows and Linux.</dd></div><div><dt>Driving and camera</dt><dd>Arcade handling for a heavy tanker with a high chase camera, inspired by the late-90s racer Ignition. Damage lowers top speed instead of disabling the vehicle.</dd></div><div><dt>Combat</dt><dd>Rocket turrets aim ahead of the tanker, and a marker shows where a rocket will land before it hits. The player fires back with a mouse-aimed rocket launcher and can switch weapon, look back, toggle headlights and use the radio.</dd></div><div><dt>Route and story</dt><dd>A 3.7 km convoy route along a canyon rim road and across a bridge, with radio messages from the crew and a results screen with run time, tanker health and worst moment.</dd></div><div><dt>Assets</dt><dd>3D models generated with Meshy, cut down to around 3,000 polygons each. Music and sound effects prepared by me.</dd></div></dl>
+      </div>
+    </div>
+      </section>
+
       <section class="band band-storytailor" id="storytailor" aria-labelledby="storytailor-title">
         <div class="split split-reverse">
           <figure class="media media-book" data-reveal>
@@ -169,34 +197,6 @@
         <p class="tech-lede">A React app with a Supabase backend, where Netlify Functions orchestrate a chain of models from a voice recording to a printed and shipped book.</p>
         <ol class="flow" aria-label="How it works, step by step"><li>Record in English or Swedish</li><li>Transcribe</li><li>Extract characters and world</li><li>Split into pages</li><li>Illustrate consistently</li><li>Lay out a print PDF</li><li>Pay, print and ship</li></ol>
         <dl class="facts facts-2"><div><dt>Stack</dt><dd>React 19 and Vite; Supabase for Auth, Postgres with row-level security, and Storage for audio, images and PDFs; Netlify Functions, including a background function; @react-pdf/renderer for print-ready PDFs; Capacitor for an iOS build.</dd></div><div><dt>Language models</dt><dd>OpenAI Whisper transcribes Swedish and English. Claude Haiku 4.5 handles the fast structured steps: character extraction, style guides and visual prompts. Claude Sonnet 4.6 splits stories into pages, suggests illustrations and analyses uploaded style reference images.</dd></div><div><dt>Images and audio</dt><dd>Black Forest Labs FLUX 1.1 Pro on Replicate creates character reference images; FLUX Kontext Pro uses them to keep characters consistent from page to page. OpenAI text-to-speech reads stories aloud.</dd></div><div><dt>Payments and print</dt><dd>Stripe Checkout with a verified webhook, followed by the Lulu Print API (OAuth client credentials) for print-on-demand production and shipping.</dd></div><div><dt>Engineering</dt><dd>All API keys stay server-side in functions; the browser holds only Supabase’s public key. Image calls back off and retry when rate-limited, and the PDF layout includes bleed for Lulu’s print specification.</dd></div></dl>
-      </div>
-    </div>
-      </section>
-
-      <section class="band band-wasteland" id="wasteland" aria-labelledby="wasteland-title">
-        <div class="split">
-          <div class="band-copy" data-reveal>
-            <h2 id="wasteland-title">Wasteland Racer</h2>
-            <p class="lead">Get the oil through.</p>
-            <p>A 3D driving game for the desktop. You drive an oil tanker 3.7 kilometres through a red desert wasteland, along a canyon rim and over a bridge, while rocket turrets and raiders try to stop the delivery. My first game, made in Godot with AI as the programmer.</p>
-            <p class="meta">Desktop game in Godot · playable build on request</p>
-          </div>
-          <figure class="media media-wide" data-reveal>
-            <video class="clip " data-src="/assets/media/wasteland.mp4" poster="/assets/media/wasteland.jpg" width="1280" height="778" muted loop playsinline preload="none" aria-label="Wasteland Racer: an oil tanker driving through a red desert, crossing a bridge, dodging rockets in a canyon and reaching the delivery screen"></video>
-            <figcaption>One run, from the oil field to delivery.</figcaption>
-          </figure>
-        </div>
-        
-    <div class="detail" data-reveal>
-      <div class="detail-col">
-        <h3>Behind the project</h3>
-        <dl class="facts"><div><dt>My contribution</dt><dd>I came up with the game, decided what it should feel like and what to cut, and playtested every version. The code was written by AI in Godot from my descriptions and my feedback after each drive.</dd></div><div><dt>How AI fits</dt><dd>AI writes the GDScript, explains the engine and fixes bugs from my notes. The 3D models were generated with Meshy’s text-to-3D tool; the music and sound effects I prepared myself.</dd></div><div><dt>A product decision</dt><dd>Damage slows the tanker down but never stops it. Every run can still be finished, so the challenge is how well you drive, not whether you can get to the end.</dd></div><div><dt>What I’m learning</dt><dd>Game feel only shows up when you play. Small things, like the camera angle, a warning before a rocket lands or a short radio line, matter more than another feature.</dd></div></dl>
-      </div>
-      <div class="detail-col">
-        <h3>Technical detail</h3>
-        <p class="tech-lede">A single-player desktop game in Godot 4 with Jolt physics. The level is a point-to-point route rather than a lap track, with scripted encounters along the way.</p>
-        <ol class="flow" aria-label="How it works, step by step"><li>Drive the tanker with the keyboard</li><li>Aim and fire with the mouse</li><li>Dodge marked rocket impacts</li><li>Radio lines from the convoy</li><li>Results screen at delivery</li></ol>
-        <dl class="facts facts-2"><div><dt>Engine</dt><dd>Godot 4 with the Forward+ renderer and Jolt Physics, scripted in GDScript. Runs on macOS and can be exported to Windows and Linux.</dd></div><div><dt>Driving and camera</dt><dd>Arcade handling for a heavy tanker with a high chase camera, inspired by the late-90s racer Ignition. Damage lowers top speed instead of disabling the vehicle.</dd></div><div><dt>Combat</dt><dd>Rocket turrets aim ahead of the tanker, and a marker shows where a rocket will land before it hits. The player fires back with a mouse-aimed rocket launcher and can switch weapon, look back, toggle headlights and use the radio.</dd></div><div><dt>Route and story</dt><dd>A 3.7 km convoy route along a canyon rim road and across a bridge, with radio messages from the crew and a results screen with run time, tanker health and worst moment.</dd></div><div><dt>Assets</dt><dd>3D models generated with Meshy, cut down to around 3,000 polygons each. Music and sound effects prepared by me.</dd></div></dl>
       </div>
     </div>
       </section>

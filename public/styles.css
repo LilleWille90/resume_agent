@@ -183,7 +183,9 @@ p { margin: 0; }
 .facts { margin: 0; display: grid; gap: 22px; }
 .facts dt { font-size: var(--t-small); font-weight: 600; margin-bottom: 4px; }
 .facts dd { margin: 0; font-size: var(--t-body); line-height: 1.55; }
-.facts-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(24px, 3vw, 48px); row-gap: 26px; }
+/* Two balanced columns that flow like a newspaper, so a short fact never leaves a hole */
+.facts-2 { display: block; columns: 2; column-gap: clamp(24px, 3vw, 48px); }
+.facts-2 > div { break-inside: avoid; margin-bottom: 26px; }
 .tech-lede { margin-bottom: 20px; }
 .flow {
   list-style: none;
@@ -427,7 +429,7 @@ p { margin: 0; }
   .detail { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .facts-2 { grid-template-columns: 1fr; }
+  .facts-2 { columns: 1; }
   .site-nav { justify-content: flex-start; gap: 4px 20px; }
   .detail { grid-template-columns: 1fr; }
   .mosaic { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); height: 62vh; min-height: 400px; }
