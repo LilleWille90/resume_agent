@@ -24,7 +24,7 @@ I actively build with models, APIs and agentic tools to understand how new capab
 - “How do you align stakeholders in complex organisations?”
 
 ## Has Mattias worked with GDPR, data protection or privacy?
-Yes. As a consultant at Acando and CGI (2016-2020) he spent about two years at Ikano Bostad, a Swedish housing company, working on digitalisation and GDPR (data protection, personal data and privacy compliance). At Electrolux he works with legal and cybersecurity teams on connected products, where privacy and data protection are part of every release.
+Yes. As a consultant at Acando and CGI (2016-2020) he spent two years, 2016-2018, at Ikano Bostad, a Swedish housing company, working on digitalisation and GDPR (data protection, personal data and privacy compliance). At Electrolux he works with legal and cybersecurity teams on connected products, where privacy and data protection are part of every release.
 
 ## What did Mattias do at Ikano Bostad?
-About two years as a consultant (through Acando and CGI) on digitalisation and GDPR at the housing company Ikano Bostad.
+Two years, 2016-2018, as a consultant (through Acando) on digitalisation and GDPR at the housing company Ikano Bostad.
